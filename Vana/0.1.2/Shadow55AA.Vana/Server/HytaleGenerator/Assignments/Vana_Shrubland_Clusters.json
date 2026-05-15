@@ -1,0 +1,222 @@
+{
+  "Type": "Weighted",
+  "WeightedAssignments": [
+    {
+      "Weight": 1,
+      "Assignments": {
+        "Type": "Constant",
+        "Prop": {
+          "Type": "Cluster",
+          "WeightedProps": [
+            {
+              "ColumnProp": {
+                "Type": "Column",
+                "Scanner": {
+                  "Type": "ColumnLinear",
+                  "MinY": -2,
+                  "MaxY": 2,
+                  "RelativeToPosition": true
+                },
+                "Directionality": {
+                  "Type": "Static",
+                  "Pattern": {
+                    "Type": "Floor",
+                    "Floor": {
+                      "Type": "BlockType",
+                      "Material": {
+                        "Solid": "Soil_Grass"
+                      }
+                    },
+                    "Origin": {
+                      "Type": "BlockType",
+                      "Material": {
+                        "Solid": "Empty"
+                      }
+                    },
+                    "ExportAs": "P_Floor_Grass"
+                  }
+                },
+                "ColumnBlocks": [
+                  {
+                    "Y": 0,
+                    "Material": {
+                      "Solid": "Plant_Bush_Green"
+                    }
+                  }
+                ]
+              },
+              "Weight": 3
+            },
+            {
+              "ColumnProp": {
+                "Type": "Column",
+                "Scanner": {
+                  "Type": "ColumnLinear",
+                  "MaxY": 2,
+                  "RelativeToPosition": true,
+                  "MinY": -2
+                },
+                "Directionality": {
+                  "Type": "Static",
+                  "Pattern": {
+                    "Type": "Imported",
+                    "Name": "P_Floor_Grass"
+                  }
+                },
+                "ColumnBlocks": [
+                  {
+                    "Y": 0,
+                    "Material": {
+                      "Solid": "Plant_Bush"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "Range": 5,
+          "DistanceCurve": {
+            "Type": "Manual",
+            "Points": [
+              {
+                "Out": 1
+              },
+              {
+                "In": 5
+              }
+            ]
+          },
+          "Scanner": {
+            "Type": "ColumnLinear",
+            "RelativeToPosition": true,
+            "MaxY": 50
+          },
+          "Pattern": {
+            "Type": "Floor",
+            "Floor": {
+              "Type": "BlockType",
+              "Material": {
+                "Solid": "Soil_Grass"
+              }
+            },
+            "Origin": {
+              "Type": "BlockType",
+              "Material": {
+                "Solid": "Empty"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "Weight": 1,
+      "Assignments": {
+        "Type": "Constant",
+        "Prop": {
+          "Type": "Cluster",
+          "WeightedProps": [
+            {
+              "ColumnProp": {
+                "Type": "Column",
+                "Scanner": {
+                  "Type": "ColumnLinear",
+                  "MinY": -2,
+                  "MaxY": 2,
+                  "RelativeToPosition": true
+                },
+                "Directionality": {
+                  "Type": "Static",
+                  "Pattern": {
+                    "Type": "Floor",
+                    "Floor": {
+                      "Type": "BlockType",
+                      "Material": {
+                        "Solid": "Soil_Grass"
+                      }
+                    },
+                    "Origin": {
+                      "Type": "BlockType",
+                      "Material": {
+                        "Solid": "Empty"
+                      }
+                    },
+                    "ExportAs": "P_Floor_Grass"
+                  }
+                },
+                "ColumnBlocks": [
+                  {
+                    "Y": 0,
+                    "Material": {
+                      "Solid": "Plant_Bush_Green"
+                    }
+                  }
+                ]
+              },
+              "Weight": 3
+            },
+            {
+              "ColumnProp": {
+                "Type": "Column",
+                "Scanner": {
+                  "Type": "ColumnLinear",
+                  "MaxY": 2,
+                  "RelativeToPosition": true,
+                  "MinY": -2
+                },
+                "Directionality": {
+                  "Type": "Static",
+                  "Pattern": {
+                    "Type": "Imported",
+                    "Name": "P_Floor_Grass"
+                  }
+                },
+                "ColumnBlocks": [
+                  {
+                    "Y": 0,
+                    "Material": {
+                      "Solid": "Plant_Fern_Forest"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "Range": 5,
+          "DistanceCurve": {
+            "Type": "Manual",
+            "Points": [
+              {
+                "Out": 1
+              },
+              {
+                "In": 5
+              }
+            ]
+          },
+          "Scanner": {
+            "Type": "ColumnLinear",
+            "RelativeToPosition": true,
+            "MaxY": 50
+          },
+          "Pattern": {
+            "Type": "Floor",
+            "Floor": {
+              "Type": "BlockType",
+              "Material": {
+                "Solid": "Soil_Grass"
+              }
+            },
+            "Origin": {
+              "Type": "BlockType",
+              "Material": {
+                "Solid": "Empty"
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "ExportAs": "Vana_Shrubland_Clusters"
+}

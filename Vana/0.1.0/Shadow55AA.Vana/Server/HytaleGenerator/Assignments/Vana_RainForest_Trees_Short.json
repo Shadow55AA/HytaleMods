@@ -1,0 +1,199 @@
+{
+  "Type": "Constant",
+  "ExportAs": "Vana_RainForest_Trees_Short",
+  "Prop": {
+    "Type": "Queue",
+    "Props": [
+      {
+        "Type": "Prefab",
+        "WeightedPrefabPaths": [
+          {
+            "Path": "Trees/Ash/Angled/Stage_00"
+          }
+        ],
+        "Scanner": {
+          "Type": "ColumnLinear",
+          "RelativeToPosition": true,
+          "MaxY": 50
+        },
+        "Directionality": {
+          "Type": "Pattern",
+          "NorthPattern": {
+            "Type": "And",
+            "Patterns": [
+              {
+                "Type": "Floor",
+                "Floor": {
+                  "Type": "BlockSet",
+                  "BlockSet": {
+                    "Materials": [
+                      {
+                        "Solid": "Soil_Grass"
+                      },
+                      {
+                        "Solid": "Plant_Crop_Mushroom_Block_Brown"
+                      }
+                    ]
+                  }
+                },
+                "Origin": {
+                  "Type": "BlockType",
+                  "Material": {
+                    "Solid": "Empty"
+                  }
+                },
+                "ExportAs": "P_Forest_Ground"
+              },
+              {
+                "Type": "Offset",
+                "Offset": {
+                  "Z": -2,
+                  "Y": -1
+                },
+                "Pattern": {
+                  "Type": "BlockSet",
+                  "BlockSet": {
+                    "Materials": [
+                      {
+                        "Solid": "Empty"
+                      },
+                      {
+                        "Solid": "Soil_Sand"
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "SouthPattern": {
+            "Type": "And",
+            "Patterns": [
+              {
+                "Type": "Imported",
+                "Name": "P_Forest_Ground"
+              },
+              {
+                "Type": "Offset",
+                "Offset": {
+                  "X": 0,
+                  "Y": -1,
+                  "Z": 2
+                },
+                "Pattern": {
+                  "Type": "BlockSet",
+                  "BlockSet": {
+                    "Materials": [
+                      {
+                        "Solid": "Empty"
+                      },
+                      {
+                        "Solid": "Soil_Sand"
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "EastPattern": {
+            "Type": "And",
+            "Patterns": [
+              {
+                "Type": "Imported",
+                "Name": "P_Forest_Ground"
+              },
+              {
+                "Type": "Offset",
+                "Offset": {
+                  "X": 2,
+                  "Y": -1,
+                  "Z": 0
+                },
+                "Pattern": {
+                  "Type": "BlockSet",
+                  "BlockSet": {
+                    "Materials": [
+                      {
+                        "Solid": "Empty"
+                      },
+                      {
+                        "Solid": "Soil_Sand"
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "WestPattern": {
+            "Type": "And",
+            "Patterns": [
+              {
+                "Type": "Imported",
+                "Name": "P_Forest_Ground"
+              },
+              {
+                "Type": "Offset",
+                "Offset": {
+                  "X": -2,
+                  "Y": -1,
+                  "Z": 0
+                },
+                "Pattern": {
+                  "Type": "BlockSet",
+                  "BlockSet": {
+                    "Materials": [
+                      {
+                        "Solid": "Empty"
+                      },
+                      {
+                        "Solid": "Soil_Sand"
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "Type": "Prefab",
+        "Directionality": {
+          "Type": "Random",
+          "Pattern": {
+            "Type": "Imported",
+            "Name": "P_Forest_Ground"
+          }
+        },
+        "Scanner": {
+          "Type": "ColumnLinear",
+          "MinY": 0,
+          "MaxY": 50,
+          "RelativeToPosition": true
+        },
+        "WeightedPrefabPaths": [
+          {
+            "Path": "Trees/Banyan/Stage_00"
+          },
+          {
+            "Path": "Trees/Ash/Stage_00"
+          },
+          {
+            "Path": "Trees/Oak/Stage_00"
+          }
+        ],
+        "BlockMask": {
+          "DontReplace": {
+            "Materials": [
+              {
+                "Solid": "Soil_Grass"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "Type": "Mix",
+  "Inputs": [
+    {
+      "Type": "Abs",
+      "ExportAs": "",
+      "Inputs": [
+        {
+          "Type": "SimplexNoise2D",
+          "Scale": 2500,
+          "Persistence": 0.2,
+          "Octaves": 3,
+          "Lacunarity": 5,
+          "Seed": "Continents"
+        }
+      ]
+    },
+    {
+      "Type": "Constant",
+      "Value": 0.2
+    },
+    {
+      "Type": "Axis",
+      "Axis": {
+        "Y": 1
+      },
+      "Curve": {
+        "Type": "Manual",
+        "Points": [
+          {
+            "Out": 1.1,
+            "In": 100
+          },
+          {
+            "Out": -0.1,
+            "In": 200
+          }
+        ]
+      }
+    }
+  ],
+  "ExportAs": "Vana_Landmap"
+}

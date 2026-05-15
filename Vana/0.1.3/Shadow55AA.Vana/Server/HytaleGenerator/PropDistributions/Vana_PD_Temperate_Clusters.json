@@ -1,0 +1,191 @@
+{
+  "Type": "Assigned",
+  "PropDistribution": {
+    "Type": "Positions",
+    "Positions": {
+      "Type": "Mesh2D",
+      "PointsY": 98,
+      "PointGenerator": {
+        "Type": "Mesh",
+        "ScaleX": 15,
+        "ScaleY": 15,
+        "ScaleZ": 15,
+        "Seed": "Ground_Clusters"
+      }
+    }
+  },
+  "Assignments": {
+    "Type": "Weighted",
+    "WeightedAssignments": [
+      {
+        "Assignments": {
+          "Type": "Constant",
+          "Prop": {
+            "Type": "Cluster",
+            "Range": 5,
+            "DistanceCurve": {
+              "Type": "Manual",
+              "Points": [
+                {
+                  "Out": 1
+                },
+                {
+                  "In": 5
+                }
+              ]
+            },
+            "WeightedProps": [
+              {
+                "Weight": 3,
+                "ColumnProp": {
+                  "Type": "Column",
+                  "ColumnBlocks": [
+                    {
+                      "Y": 0,
+                      "Material": {
+                        "Solid": "Plant_Bush_Green"
+                      }
+                    }
+                  ],
+                  "Directionality": {
+                    "Type": "Static",
+                    "Pattern": {
+                      "Type": "Imported",
+                      "Name": "P_Floor_Grass"
+                    }
+                  },
+                  "Scanner": {
+                    "Type": "ColumnLinear",
+                    "MinY": -2,
+                    "MaxY": 2,
+                    "RelativeToPosition": true
+                  }
+                }
+              },
+              {
+                "ColumnProp": {
+                  "Type": "Column",
+                  "Directionality": {
+                    "Type": "Static",
+                    "Pattern": {
+                      "Type": "Imported",
+                      "Name": "P_Floor_Grass"
+                    }
+                  },
+                  "Scanner": {
+                    "Type": "ColumnLinear",
+                    "MinY": -2,
+                    "MaxY": 2,
+                    "RelativeToPosition": true
+                  },
+                  "ColumnBlocks": [
+                    {
+                      "Y": 0,
+                      "Material": {
+                        "Solid": "Plant_Bush"
+                      }
+                    }
+                  ]
+                }
+              }
+            ],
+            "Scanner": {
+              "Type": "ColumnLinear",
+              "MaxY": 50,
+              "RelativeToPosition": true
+            },
+            "Pattern": {
+              "Type": "Imported",
+              "Name": "P_Floor_Grass"
+            }
+          }
+        }
+      },
+      {
+        "Assignments": {
+          "Type": "Constant",
+          "Prop": {
+            "Type": "Cluster",
+            "Range": 5,
+            "DistanceCurve": {
+              "Type": "Manual",
+              "Points": [
+                {
+                  "Out": 1
+                },
+                {
+                  "In": 5
+                }
+              ]
+            },
+            "Pattern": {
+              "Type": "Imported",
+              "Name": "P_Floor_Grass"
+            },
+            "Scanner": {
+              "Type": "ColumnLinear",
+              "MaxY": 50,
+              "RelativeToPosition": true
+            },
+            "WeightedProps": [
+              {
+                "Weight": 3,
+                "ColumnProp": {
+                  "Type": "Column",
+                  "ColumnBlocks": [
+                    {
+                      "Y": 0,
+                      "Material": {
+                        "Solid": "Plant_Grass_Jungle_Short"
+                      }
+                    }
+                  ],
+                  "Directionality": {
+                    "Type": "Static",
+                    "Pattern": {
+                      "Type": "Imported",
+                      "Name": "P_Floor_Grass"
+                    }
+                  },
+                  "Scanner": {
+                    "Type": "ColumnLinear",
+                    "MinY": -2,
+                    "MaxY": 2,
+                    "RelativeToPosition": true
+                  }
+                }
+              },
+              {
+                "ColumnProp": {
+                  "Type": "Column",
+                  "Directionality": {
+                    "Type": "Static",
+                    "Pattern": {
+                      "Type": "Imported",
+                      "Name": "P_Floor_Grass"
+                    }
+                  },
+                  "Scanner": {
+                    "Type": "ColumnLinear",
+                    "MinY": -2,
+                    "MaxY": 2,
+                    "RelativeToPosition": true
+                  },
+                  "ColumnBlocks": [
+                    {
+                      "Y": 0,
+                      "Material": {
+                        "Solid": "Plant_Grass_Jungle_Tall"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "ExportAs": "Vana_PD_Temperate_Clusters"
+}

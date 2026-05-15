@@ -1,0 +1,160 @@
+{
+  "Type": "NoiseRange",
+  "DefaultTransitionDistance": 32,
+  "MaxBiomeEdgeDistance": 32,
+  "DefaultBiome": "Void",
+  "Density": {
+    "Type": "YOverride",
+    "ExportAs": "Vana_WS_Density",
+    "Inputs": [
+      {
+        "Type": "Cache",
+        "Inputs": [
+          {
+            "Type": "Sum",
+            "Inputs": [
+              {
+                "Type": "Plane",
+                "PlaneNormal": {
+                  "Z": 1
+                },
+                "Curve": {
+                  "Type": "Manual",
+                  "Points": [
+                    {
+                      "In": 0,
+                      "Out": 0
+                    },
+                    {
+                      "In": 6000,
+                      "Out": 1.2
+                    }
+                  ]
+                }
+              },
+              {
+                "Type": "CurveMapper",
+                "Inputs": [
+                  {
+                    "Type": "SimplexNoise2D",
+                    "Skip": false,
+                    "Lacunarity": 2,
+                    "Persistence": 0.5,
+                    "Octaves": 2,
+                    "Scale": 500,
+                    "Seed": "Biomes"
+                  }
+                ],
+                "Curve": {
+                  "Type": "Manual",
+                  "Points": [
+                    {
+                      "In": -1,
+                      "Out": 0
+                    },
+                    {
+                      "In": 1,
+                      "Out": 0.0999
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Biomes": [
+    {
+      "Min": 0,
+      "Max": 0.06,
+      "Biome": "Vana_RainForest_Thick"
+    },
+    {
+      "Min": 0.06,
+      "Max": 0.1,
+      "Biome": "Vana_RainForest"
+    },
+    {
+      "Biome": "Vana_RainForest_Thin",
+      "Min": 0.1,
+      "Max": 0.2
+    },
+    {
+      "Min": 0.2,
+      "Max": 0.25,
+      "Biome": "Vana_Savanna"
+    },
+    {
+      "Min": 0.25,
+      "Max": 0.32,
+      "Biome": "Vana_Arid"
+    },
+    {
+      "Min": 0.32,
+      "Max": 0.38,
+      "Biome": "Vana_Desert"
+    },
+    {
+      "Min": 0.38,
+      "Max": 0.45,
+      "Biome": "Vana_Arid"
+    },
+    {
+      "Min": 0.45,
+      "Max": 0.5,
+      "Biome": "Vana_Shrubland"
+    },
+    {
+      "Min": 0.5,
+      "Max": 0.8,
+      "Biome": "Vana_Temperate"
+    },
+    {
+      "Min": 0.8,
+      "Max": 1.1,
+      "Biome": "Vana_Boreal"
+    }
+  ],
+  "Framework": [
+    {
+      "Type": "DecimalConstants",
+      "Entries": [
+        {
+          "Name": "Bedrock"
+        },
+        {
+          "Name": "Base",
+          "Value": 100
+        },
+        {
+          "Name": "Water",
+          "Value": 100
+        }
+      ]
+    }
+  ],
+  "SpawnPositions": {
+    "Type": "Bound",
+    "Bounds": {
+      "PointA": {
+        "X": -500,
+        "Z": -500,
+        "Y": -100
+      },
+      "PointB": {
+        "X": 500,
+        "Z": 500,
+        "Y": 100
+      }
+    },
+    "Positions": {
+      "Type": "Mesh2D",
+      "PointsY": 100,
+      "PointGenerator": {
+        "Type": "Mesh"
+      }
+    }
+  }
+}

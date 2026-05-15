@@ -1,0 +1,9 @@
+{
+  "Type": "SimplexNoise2D",
+  "Scale": 500,
+  "ExportAs": "Vana_Caves_Arterial_Map",
+  "Persistence": 0.8,
+  "Octaves": 2,
+  "Lacunarity": 1.5,
+  "Seed": "Caves_Arterial"
+}

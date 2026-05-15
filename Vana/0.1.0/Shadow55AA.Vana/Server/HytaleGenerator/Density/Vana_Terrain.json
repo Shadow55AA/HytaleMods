@@ -1,0 +1,260 @@
+{
+  "Type": "Sum",
+  "ExportAs": "Vana_Terrain",
+  "Inputs": [
+    {
+      "Type": "Multiplier",
+      "Inputs": [
+        {
+          "Type": "Multiplier",
+          "ExportAs": "Vana_Masked_Mountains",
+          "Inputs": [
+            {
+              "Type": "CurveMapper",
+              "ExportAs": "Vana_Mountains_Mask",
+              "Inputs": [
+                {
+                  "Type": "Abs",
+                  "Inputs": [
+                    {
+                      "Type": "SimplexNoise2D",
+                      "Skip": false,
+                      "Lacunarity": 2,
+                      "Persistence": 0.9,
+                      "Octaves": 1,
+                      "Scale": 2500,
+                      "Seed": "A"
+                    }
+                  ]
+                }
+              ],
+              "Curve": {
+                "Type": "Manual",
+                "Points": [
+                  {
+                    "In": 0.1,
+                    "Out": 1
+                  },
+                  {
+                    "In": 0.2,
+                    "Out": 0.4
+                  },
+                  {
+                    "In": 0.3,
+                    "Out": 0.2
+                  },
+                  {
+                    "In": 0.4,
+                    "Out": 0
+                  }
+                ]
+              }
+            },
+            {
+              "Type": "CurveMapper",
+              "Inputs": [
+                {
+                  "Type": "Imported",
+                  "Name": "Vana_Landmap"
+                }
+              ],
+              "Curve": {
+                "Type": "Manual",
+                "Points": [
+                  {
+                    "In": 0.013,
+                    "Out": -0.45
+                  },
+                  {
+                    "In": 0.015,
+                    "Out": 0
+                  },
+                  {
+                    "In": 0.15,
+                    "Out": 0
+                  },
+                  {
+                    "In": 0.3,
+                    "Out": 0.1
+                  },
+                  {
+                    "In": 0.35,
+                    "Out": 0.2
+                  },
+                  {
+                    "In": 0.4,
+                    "Out": 0.6
+                  },
+                  {
+                    "In": 0.45,
+                    "Out": 0.2
+                  },
+                  {
+                    "In": 0.5,
+                    "Out": 0.1
+                  },
+                  {
+                    "In": 0.55,
+                    "Out": 0
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "Type": "CurveMapper",
+          "Inputs": [
+            {
+              "Type": "CellNoise2D",
+              "CellType": "Distance2",
+              "ScaleX": 50,
+              "ScaleZ": 50,
+              "Jitter": 0.5,
+              "Octaves": 3,
+              "Seed": "A"
+            }
+          ],
+          "Curve": {
+            "Type": "Manual",
+            "Points": [
+              {
+                "In": -1,
+                "Out": 0
+              },
+              {
+                "In": 0,
+                "Out": 1
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "Type": "CurveMapper",
+      "Inputs": [
+        {
+          "Type": "Imported",
+          "Name": "Vana_Landmap"
+        }
+      ],
+      "Curve": {
+        "Type": "Manual",
+        "Points": [
+          {
+            "In": 0,
+            "Out": -0.5
+          },
+          {
+            "In": 0.05,
+            "Out": -0.48
+          },
+          {
+            "In": 0.055,
+            "Out": -0.37
+          },
+          {
+            "In": 0.1,
+            "Out": -0.33
+          },
+          {
+            "In": 0.2,
+            "Out": -0.32
+          },
+          {
+            "In": 0.4,
+            "Out": -0.31
+          },
+          {
+            "In": 1,
+            "Out": -0.3
+          }
+        ]
+      }
+    },
+    {
+      "Type": "Multiplier",
+      "Inputs": [
+        {
+          "Type": "CurveMapper",
+          "Inputs": [
+            {
+              "Type": "Abs",
+              "Inputs": [
+                {
+                  "Type": "Imported",
+                  "Name": "Vana_Masked_Mountains"
+                }
+              ]
+            }
+          ],
+          "Curve": {
+            "Type": "Manual",
+            "Points": [
+              {
+                "In": 0.005,
+                "Out": 1
+              },
+              {
+                "In": 0.05,
+                "Out": 0
+              }
+            ]
+          }
+        },
+        {
+          "Type": "CurveMapper",
+          "Inputs": [
+            {
+              "Type": "Abs",
+              "Inputs": [
+                {
+                  "Type": "Imported",
+                  "Name": "Vana_Rivers"
+                }
+              ]
+            }
+          ],
+          "Curve": {
+            "Type": "Manual",
+            "Points": [
+              {
+                "In": 0,
+                "Out": -0.05
+              },
+              {
+                "In": 0.05,
+                "Out": 0
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "Type": "CurveMapper",
+      "Inputs": [
+        {
+          "Type": "BaseHeight",
+          "Skip": false,
+          "BaseHeightName": "Base",
+          "Distance": true
+        }
+      ],
+      "Curve": {
+        "Type": "Manual",
+        "Points": [
+          {
+            "In": -100,
+            "Out": 1
+          },
+          {
+            "In": 200,
+            "Out": -1
+          }
+        ]
+      }
+    }
+  ]
+}

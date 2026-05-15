@@ -1,0 +1,39 @@
+{
+  "Environments": [
+    "Env_Vana_RainForest_Shores"
+  ],
+  "NPCs": [
+    {
+      "Id": "Tang_Chevron",
+      "Weight": 2
+    },
+    {
+      "Id": "Clownfish",
+      "Weight": 1
+    },
+    {
+      "Id": "Pufferfish",
+      "Weight": 1
+    },
+    {
+      "Id": "Tang_Sailfin",
+      "Weight": 1
+    },
+    {
+      "Id": "Crab",
+      "Weight": 2
+    },
+    {
+      "Id": "Lobster",
+      "Weight": 1
+    },
+    {
+      "Id": "Tortoise",
+      "Weight": 1
+    }
+  ],
+  "DayTimeRange": [
+    0,
+    24
+  ]
+}

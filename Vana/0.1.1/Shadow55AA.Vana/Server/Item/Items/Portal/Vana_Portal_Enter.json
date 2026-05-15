@@ -1,0 +1,95 @@
+{
+  "Parent": "Forgotten_Temple_Portal_Enter",
+  "BlockType": {
+    "DrawType": "Model",
+    "CustomModel": "Blocks/Miscellaneous/Platform_Magic_Exit.blockymodel",
+    "Material": "Solid",
+    "Opacity": "Transparent",
+    "BlockParticleSetId": "Stone",
+    "Particles": [
+      {
+        "SystemId": "MagicPortal_ForgottenTemple",
+        "PositionOffset": {
+          "Y": 2.5
+        }
+      }
+    ],
+    "VariantRotation": "NESW",
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Rocks",
+        "ItemId": "Vana_Portal_Enter"
+      }
+    },
+    "HitboxType": "Pad_Portal",
+    "Interactions": {
+      "CollisionEnter": {
+        "Interactions": [
+          {
+            "Type": "TeleportInstance",
+            "Next": {
+              "Type": "Simple",
+              "Effects": {
+                "LocalSoundEventId": "SFX_Portal_Neutral_Teleport_Local"
+              }
+            },
+            "InstanceName": "Vana",
+            "PersonalReturnPoint": true,
+            "PositionOffset": {
+              "X": 0,
+              "Y": 0,
+              "Z": 0
+            },
+            "Rotation": {
+              "Pitch": 0,
+              "Yaw": 0,
+              "Roll": 0
+            },
+            "InstanceKey": "Vana"
+          }
+        ]
+      }
+    },
+    "BlockSoundSetId": "Stone",
+    "AmbientSoundEventId": "SFX_Portal_Neutral",
+    "BlockBreakingDecalId": "Breaking_Decals_Rock"
+  },
+  "Icon": "Icons/ItemsGenerated/Vana_Portal_Enter.png",
+  "IconProperties": {
+    "Scale": 0.58823,
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ],
+    "Translation": [
+      0,
+      -13.5
+    ]
+  },
+  "TranslationProperties": {
+    "Name": "server.items.Vana_Portal_Enter.name"
+  },
+  "Recipe": {
+    "Input": [
+      {
+        "Quantity": 9,
+        "ResourceTypeId": "Rock"
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Id": "Fieldcraft",
+        "Categories": [
+          "Tools"
+        ]
+      },
+      {
+        "Id": "Workbench",
+        "Categories": [
+          "Workbench_Survival"
+        ]
+      }
+    ]
+  }
+}

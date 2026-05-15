@@ -1,0 +1,31 @@
+{
+  "NPCs": [
+    {
+      "Id": "Lizard_Sand",
+      "Weight": 1
+    },
+    {
+      "Id": "Armadillo",
+      "Weight": 1
+    },
+    {
+      "Id": "Hyena",
+      "Weight": 1
+    },
+    {
+      "Id": "Scorpion",
+      "Weight": 1
+    },
+    {
+      "Id": "Snake_Cobra",
+      "Weight": 1
+    },
+    {
+      "Id": "Vulture",
+      "Weight": 3
+    }
+  ],
+  "Environments": [
+    "Env_Vana_Arid"
+  ]
+}

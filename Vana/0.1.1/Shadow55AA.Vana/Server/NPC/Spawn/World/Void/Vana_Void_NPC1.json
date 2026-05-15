@@ -1,0 +1,47 @@
+{
+  "Environments": [
+    "Env_Vana_RainForest",
+    "Env_Vana_Arid"
+  ],
+  "Despawn": {
+    "DayTimeRange": [
+      5,
+      19
+    ]
+  },
+  "MoonPhaseWeightModifiers": [
+    0.5,
+    1,
+    1.5,
+    1.5,
+    1
+  ],
+  "NPCs": [
+    {
+      "Weight": 20,
+      "SpawnBlockSet": "Soil",
+      "Id": "Larva_Void",
+      "Flock": {
+        "Size": [
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "Id": "Crawler_Void",
+      "Weight": 15,
+      "SpawnBlockSet": "Soil"
+    }
+  ],
+  "DayTimeRange": [
+    19,
+    5
+  ],
+  "LightRanges": {
+    "Light": [
+      0,
+      8
+    ]
+  }
+}

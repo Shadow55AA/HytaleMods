@@ -1,0 +1,93 @@
+{
+  "version": 8,
+  "blockIdVersion": 11,
+  "anchorX": 1,
+  "anchorY": 5,
+  "anchorZ": -4,
+  "blocks": [
+    {
+      "x": -1,
+      "y": 4,
+      "z": -4,
+      "name": "Soil_Pathway"
+    },
+    {
+      "x": 0,
+      "y": 4,
+      "z": -5,
+      "name": "Soil_Pathway"
+    },
+    {
+      "x": 0,
+      "y": 4,
+      "z": -4,
+      "name": "Soil_Pathway"
+    },
+    {
+      "x": 0,
+      "y": 4,
+      "z": -3,
+      "name": "Soil_Pathway"
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "z": -6,
+      "name": "Soil_Pathway"
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "z": -5,
+      "name": "Soil_Pathway"
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "z": -4,
+      "name": "Soil_Pathway"
+    },
+    {
+      "x": 1,
+      "y": 5,
+      "z": -4,
+      "name": "Empty"
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "z": -3,
+      "name": "Soil_Pathway"
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "z": -2,
+      "name": "Soil_Pathway"
+    },
+    {
+      "x": 2,
+      "y": 4,
+      "z": -5,
+      "name": "Soil_Pathway"
+    },
+    {
+      "x": 2,
+      "y": 4,
+      "z": -4,
+      "name": "Soil_Pathway"
+    },
+    {
+      "x": 2,
+      "y": 4,
+      "z": -3,
+      "name": "Soil_Pathway"
+    },
+    {
+      "x": 3,
+      "y": 4,
+      "z": -4,
+      "name": "Soil_Pathway"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "Type": "Constant",
+  "ExportAs": "Vana_Savanna_Trees",
+  "Prop": {
+    "Type": "Prefab",
+    "WeightedPrefabPaths": [
+      {
+        "Path": "Trees/Dry/Stage_0"
+      },
+      {
+        "Path": "Trees/Dry/Stage_3"
+      },
+      {
+        "Path": "Trees/Dry/Stage_1"
+      }
+    ],
+    "Scanner": {
+      "Type": "ColumnLinear",
+      "RelativeToPosition": true,
+      "MinY": 0,
+      "MaxY": 120
+    },
+    "Directionality": {
+      "Type": "Random",
+      "Pattern": {
+        "Type": "Floor",
+        "Floor": {
+          "Type": "BlockType",
+          "Material": {
+            "Solid": "Soil_Grass"
+          }
+        },
+        "Origin": {
+          "Type": "BlockType",
+          "Material": {
+            "Solid": "Empty"
+          }
+        }
+      }
+    }
+  }
+}

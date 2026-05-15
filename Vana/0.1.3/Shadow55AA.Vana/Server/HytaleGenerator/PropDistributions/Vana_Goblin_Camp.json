@@ -1,0 +1,266 @@
+{
+  "Type": "Assigned",
+  "PropDistribution": {
+    "Type": "Positions",
+    "Positions": {
+      "Type": "FieldFunction",
+      "FieldFunction": {
+        "Type": "Imported",
+        "Name": "Vana_Caves_Arterial_Map"
+      },
+      "Delimiters": [
+        {
+          "Min": -1,
+          "Max": -0.65
+        }
+      ],
+      "Positions": {
+        "Type": "Jitter2d",
+        "Positions": {
+          "Type": "Offset",
+          "Offset": {
+            "Y": 40
+          },
+          "Positions": {
+            "Type": "Scaler",
+            "Scale": {
+              "X": 20,
+              "Y": 20,
+              "Z": 20
+            },
+            "Positions": {
+              "Type": "TriangularGrid2d"
+            }
+          }
+        },
+        "Magnitude": 2
+      },
+      "ExportAs": "Pos_Vana_Goblin_Camp"
+    }
+  },
+  "Assignments": {
+    "Type": "Weighted",
+    "WeightedAssignments": [
+      {
+        "Assignments": {
+          "Type": "Constant",
+          "Prop": {
+            "Type": "Union",
+            "Props": [
+              {
+                "Type": "Prefab",
+                "Directionality": {
+                  "Type": "Static",
+                  "Pattern": {
+                    "Type": "Floor",
+                    "Floor": {
+                      "Type": "BlockType",
+                      "Material": {
+                        "Solid": "Rock_Stone"
+                      }
+                    },
+                    "Origin": {
+                      "Type": "BlockType",
+                      "Material": {
+                        "Solid": "Empty"
+                      }
+                    },
+                    "ExportAs": "P_Floor_Stone"
+                  }
+                },
+                "Scanner": {
+                  "Type": "ColumnLinear",
+                  "RelativeToPosition": true,
+                  "MaxY": 5,
+                  "MinY": -2
+                },
+                "WeightedPrefabPaths": [
+                  {
+                    "Path": "Monuments/Encounter/Cave/Goblin_Camp/Homes"
+                  }
+                ]
+              },
+              {
+                "Type": "Offset",
+                "Offset": {
+                  "Z": 1
+                },
+                "Prop": {
+                  "Type": "Prefab",
+                  "Directionality": {
+                    "Type": "Static",
+                    "Rotation": 90,
+                    "Pattern": {
+                      "Type": "Floor",
+                      "Floor": {
+                        "Type": "BlockType",
+                        "Material": {
+                          "Solid": "Rock_Stone"
+                        }
+                      },
+                      "Origin": {
+                        "Type": "BlockType",
+                        "Material": {
+                          "Solid": "Empty"
+                        }
+                      },
+                      "ExportAs": "P_Floor_Stone"
+                    }
+                  },
+                  "Scanner": {
+                    "Type": "ColumnLinear",
+                    "RelativeToPosition": true,
+                    "MaxY": 5,
+                    "MinY": -2
+                  },
+                  "WeightedPrefabPaths": [
+                    {
+                      "Path": "Monuments/Encounter/Cave/Goblin_Camp/Homes"
+                    }
+                  ]
+                }
+              },
+              {
+                "Type": "Offset",
+                "Offset": {
+                  "X": 1,
+                  "Z": 1
+                },
+                "Prop": {
+                  "Type": "Prefab",
+                  "Directionality": {
+                    "Type": "Static",
+                    "Rotation": 180,
+                    "Pattern": {
+                      "Type": "Floor",
+                      "Floor": {
+                        "Type": "BlockType",
+                        "Material": {
+                          "Solid": "Rock_Stone"
+                        }
+                      },
+                      "Origin": {
+                        "Type": "BlockType",
+                        "Material": {
+                          "Solid": "Empty"
+                        }
+                      },
+                      "ExportAs": "P_Floor_Stone"
+                    }
+                  },
+                  "Scanner": {
+                    "Type": "ColumnLinear",
+                    "RelativeToPosition": true,
+                    "MaxY": 5,
+                    "MinY": -2
+                  },
+                  "WeightedPrefabPaths": [
+                    {
+                      "Path": "Monuments/Encounter/Cave/Goblin_Camp/Homes"
+                    }
+                  ]
+                }
+              },
+              {
+                "Type": "Offset",
+                "Offset": {
+                  "X": 1
+                },
+                "Prop": {
+                  "Type": "Prefab",
+                  "Directionality": {
+                    "Type": "Static",
+                    "Rotation": 270,
+                    "Pattern": {
+                      "Type": "Floor",
+                      "Floor": {
+                        "Type": "BlockType",
+                        "Material": {
+                          "Solid": "Rock_Stone"
+                        }
+                      },
+                      "Origin": {
+                        "Type": "BlockType",
+                        "Material": {
+                          "Solid": "Empty"
+                        }
+                      },
+                      "ExportAs": "P_Floor_Stone"
+                    }
+                  },
+                  "Scanner": {
+                    "Type": "ColumnLinear",
+                    "RelativeToPosition": true,
+                    "MaxY": 5,
+                    "MinY": -2
+                  },
+                  "WeightedPrefabPaths": [
+                    {
+                      "Path": "Monuments/Encounter/Cave/Goblin_Camp/Homes"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "Weight": 100
+      },
+      {
+        "Assignments": {
+          "Type": "Constant",
+          "Prop": {
+            "Type": "Prefab",
+            "Directionality": {
+              "Type": "Random",
+              "Pattern": {
+                "Type": "Imported",
+                "Name": "P_Floor_Stone"
+              }
+            },
+            "Scanner": {
+              "Type": "ColumnLinear",
+              "MinY": -2,
+              "MaxY": 5,
+              "RelativeToPosition": true
+            },
+            "WeightedPrefabPaths": [
+              {
+                "Path": "Monuments/Encounter/Cave/Goblin_Camp/Armory"
+              }
+            ]
+          }
+        },
+        "Weight": 7
+      },
+      {
+        "Assignments": {
+          "Type": "Constant",
+          "Prop": {
+            "Type": "Prefab",
+            "Directionality": {
+              "Type": "Random",
+              "Pattern": {
+                "Type": "Imported",
+                "Name": "P_Floor_Stone"
+              }
+            },
+            "Scanner": {
+              "Type": "ColumnLinear",
+              "MinY": -2,
+              "MaxY": 5,
+              "RelativeToPosition": true
+            },
+            "WeightedPrefabPaths": [
+              {
+                "Path": "Monuments/Encounter/Cave/Goblin_Camp/Storage"
+              }
+            ]
+          }
+        },
+        "Weight": 10
+      }
+    ]
+  },
+  "ExportAs": "Vana_Goblin_Camp"
+}

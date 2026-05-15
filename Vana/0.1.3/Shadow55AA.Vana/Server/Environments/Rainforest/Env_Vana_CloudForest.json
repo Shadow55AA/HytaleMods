@@ -1,0 +1,155 @@
+{
+  "WaterTint": "#2076b5",
+  "SpawnDensity": 0.4,
+  "WeatherForecasts": {
+    "0": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 100
+      }
+    ],
+    "1": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 100
+      }
+    ],
+    "2": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 100
+      }
+    ],
+    "3": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 100
+      }
+    ],
+    "4": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 100
+      }
+    ],
+    "5": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 100
+      }
+    ],
+    "6": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 100
+      }
+    ],
+    "7": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 100
+      }
+    ],
+    "8": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 100
+      }
+    ],
+    "9": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 100
+      }
+    ],
+    "10": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 100
+      }
+    ],
+    "11": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 100
+      }
+    ],
+    "12": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 100
+      }
+    ],
+    "13": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 100
+      }
+    ],
+    "14": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 100
+      }
+    ],
+    "15": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 100
+      }
+    ],
+    "16": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 100
+      }
+    ],
+    "17": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 100
+      }
+    ],
+    "18": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 100
+      }
+    ],
+    "19": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 100
+      }
+    ],
+    "20": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 100
+      }
+    ],
+    "21": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 100
+      }
+    ],
+    "22": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 100
+      }
+    ],
+    "23": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 100
+      }
+    ]
+  },
+  "Tags": {
+    "Rainforest": [
+      "Mountains"
+    ]
+  }
+}

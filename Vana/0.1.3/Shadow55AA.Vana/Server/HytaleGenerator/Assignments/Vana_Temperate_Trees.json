@@ -1,0 +1,86 @@
+{
+  "Type": "Constant",
+  "ExportAs": "Vana_Temperate_Trees",
+  "Prop": {
+    "Type": "Queue",
+    "Props": [
+      {
+        "Type": "Prefab",
+        "Directionality": {
+          "Type": "Random",
+          "Pattern": {
+            "Type": "Floor",
+            "Floor": {
+              "Type": "BlockSet",
+              "BlockSet": {
+                "Materials": [
+                  {
+                    "Solid": "Soil_Grass"
+                  },
+                  {
+                    "Solid": "Plant_Crop_Mushroom_Block_Brown"
+                  }
+                ]
+              }
+            },
+            "Origin": {
+              "Type": "BlockSet",
+              "BlockSet": {
+                "Materials": [
+                  {
+                    "Solid": "Empty"
+                  },
+                  {
+                    "Solid": "Plant_Bush_Green"
+                  },
+                  {
+                    "Solid": "Plant_Bush"
+                  },
+                  {
+                    "Solid": "Plant_Grass_Jungle_Short"
+                  },
+                  {
+                    "Solid": "Plant_Grass_Jungle_Tall"
+                  }
+                ]
+              }
+            },
+            "ExportAs": "P_Forest_Ground"
+          }
+        },
+        "Scanner": {
+          "Type": "ColumnLinear",
+          "MinY": 0,
+          "MaxY": 50,
+          "RelativeToPosition": true
+        },
+        "WeightedPrefabPaths": [
+          {
+            "Path": "Trees/Maple/Stage_1",
+            "Weight": 1
+          },
+          {
+            "Path": "Trees/Maple/Stage_2",
+            "Weight": 2
+          },
+          {
+            "Path": "Trees/Aspen/Stage_2",
+            "Weight": 4
+          },
+          {
+            "Path": "Trees/Aspen/Stage_3",
+            "Weight": 2
+          },
+          {
+            "Path": "Trees/Birch/Stage_2",
+            "Weight": 4
+          },
+          {
+            "Path": "Trees/Birch/Stage_3",
+            "Weight": 2
+          }
+        ]
+      }
+    ]
+  }
+}

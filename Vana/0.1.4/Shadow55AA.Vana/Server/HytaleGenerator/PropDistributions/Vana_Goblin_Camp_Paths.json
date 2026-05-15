@@ -1,0 +1,142 @@
+{
+  "Type": "Assigned",
+  "PropDistribution": {
+    "Type": "Positions",
+    "Positions": {
+      "Type": "Imported",
+      "Name": "Pos_Vana_Goblin_Camp"
+    }
+  },
+  "Assignments": {
+    "Type": "Constant",
+    "Prop": {
+      "Type": "Density",
+      "Density": {
+        "Type": "Mix",
+        "Inputs": [
+          {
+            "Type": "CurveMapper",
+            "Inputs": [
+              {
+                "Type": "PositionsCellNoise",
+                "Positions": {
+                  "Type": "Imported",
+                  "Name": "Pos_Vana_Goblin_Camp"
+                },
+                "DistanceFunction": {
+                  "Type": "Euclidean"
+                },
+                "ReturnType": {
+                  "Type": "Distance2Div"
+                },
+                "MaxDistance": 25
+              }
+            ],
+            "Curve": {
+              "Type": "Manual",
+              "Points": [
+                {
+                  "In": 0,
+                  "Out": -1
+                },
+                {
+                  "In": 1,
+                  "Out": 1
+                }
+              ]
+            }
+          },
+          {
+            "Type": "Constant",
+            "Value": -1
+          },{
+            "Type": "CurveMapper",
+            "Inputs": [
+              {
+                "Type": "BaseHeight",
+                "Skip": false,
+                "BaseHeightName": "Bedrock",
+                "Distance": true
+              }
+            ],
+            "Curve": {
+              "Type": "Manual",
+              "Points": [
+                {
+                  "In": 38,
+                  "Out": 1.1
+                },
+                {
+                  "In": 39,
+                  "Out": -0.1
+                },
+                {
+                  "In": 45,
+                  "Out": -0.1
+                },
+                {
+                  "In": 46,
+                  "Out": 1.1
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "Bounds": {
+        "PointA": {
+          "X": -25,
+          "Z": -25,
+          "Y": -2
+        },
+        "PointB": {
+          "X": 25,
+          "Z": 25,
+          "Y": 2
+        }
+      },
+      "Material": {
+        "Type": "Solidity",
+        "Solid": {
+          "Type": "Constant",
+          "Material": {
+            "Solid": "Rock_Stone_Brick_Smooth"
+          }
+        }
+      },
+      "Scanner": {
+        "Type": "ColumnLinear",
+        "MaxY": 5,
+        "RelativeToPosition": true
+      },
+      "Pattern": {
+        "Type": "Imported",
+        "Name": "P_Floor_Stone"
+      },
+      "Range": {
+        "X": 12,
+        "Y": 2,
+        "Z": 12
+      },
+      "PlacementMask": {
+        "DontReplace": {
+          "Inclusive": true,
+          "Materials": [
+            {
+              "Solid": "Empty"
+            }
+          ]
+        },
+        "DontPlace": {
+          "Inclusive": true,
+          "Materials": [
+            {
+              "Solid": "Empty"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "ExportAs": "Vana_Goblin_Camp_Paths"
+}

@@ -1,0 +1,46 @@
+{
+  "Environments": [
+    "Env_Vana_Arid"
+  ],
+  "Despawn": {
+    "DayTimeRange": [
+      5,
+      19
+    ]
+  },
+  "MoonPhaseWeightModifiers": [
+    0.5,
+    1,
+    1.5,
+    1.5,
+    1
+  ],
+  "NPCs": [
+    {
+      "Weight": 5,
+      "SpawnBlockSet": "Soil",
+      "Id": "Eye_Void",
+      "Flock": {
+        "Size": [
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "Id": "Spawn_Void",
+      "Weight": 5,
+      "SpawnBlockSet": "Soil"
+    }
+  ],
+  "DayTimeRange": [
+    19,
+    5
+  ],
+  "LightRanges": {
+    "Light": [
+      0,
+      8
+    ]
+  }
+}

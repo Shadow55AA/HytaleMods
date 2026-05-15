@@ -1,0 +1,37 @@
+{
+  "Environments": [
+    "RainForest"
+  ],
+  "NPCs": [
+    {
+      "Id": "Squirrel",
+      "Flock": "One_Or_Two",
+      "Weight": 1
+    },
+    {
+      "Id": "Bunny",
+      "Weight": 1,
+      "Flock": "Parent_And_Young_75_25"
+    },
+    {
+      "Id": "Frog_Orange",
+      "Weight": 1
+    },
+    {
+      "Id": "Parrot",
+      "Weight": 1
+    },
+    {
+      "Id": "Owl_Brown",
+      "Weight": 1
+    },
+    {
+      "Id": "Bluebird",
+      "Weight": 1
+    }
+  ],
+  "DayTimeRange": [
+    0,
+    24
+  ]
+}

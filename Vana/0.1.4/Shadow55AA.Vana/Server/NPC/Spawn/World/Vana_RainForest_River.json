@@ -1,0 +1,31 @@
+{
+  "Environments": [
+    "Env_Vana_River"
+  ],
+  "NPCs": [
+    {
+      "Id": "Bluegill",
+      "Weight": 1
+    },
+    {
+      "Id": "Catfish",
+      "Weight": 1
+    },
+    {
+      "Id": "Piranha",
+      "Weight": 3
+    },
+    {
+      "Id": "Piranha_Black",
+      "Weight": 1
+    },
+    {
+      "Id": "Salmon",
+      "Weight": 1
+    }
+  ],
+  "DayTimeRange": [
+    0,
+    24
+  ]
+}

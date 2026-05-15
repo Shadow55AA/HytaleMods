@@ -1,0 +1,15 @@
+{
+  "Entries": [
+    {
+      "Name": "Furniture_Goblin_Chest_Small",
+      "Weight": 100,
+      "Components": {
+        "Components": {
+          "ItemContainerBlock": {
+            "Droplist": "Vana_Caves_Goblin_Camp_Armory"
+          }
+        }
+      }
+    }
+  ]
+}

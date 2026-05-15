@@ -1,0 +1,243 @@
+{
+  "Type": "Constant",
+  "ExportAs": "Vana_Boreal_Trees",
+  "Prop": {
+    "Type": "Queue",
+    "Props": [
+      {
+        "Type": "Prefab",
+        "WeightedPrefabPaths": [
+          {
+            "Path": "Trees/Ash/Angled/Stage_3"
+          },
+          {
+            "Path": "Trees/Oak/Angled/Stage_4"
+          }
+        ],
+        "Scanner": {
+          "Type": "ColumnLinear",
+          "RelativeToPosition": true,
+          "MaxY": 50
+        },
+        "Directionality": {
+          "Type": "Pattern",
+          "NorthPattern": {
+            "Type": "And",
+            "Patterns": [
+              {
+                "Type": "Floor",
+                "Floor": {
+                  "Type": "BlockSet",
+                  "BlockSet": {
+                    "Materials": [
+                      {
+                        "Solid": "Soil_Grass"
+                      },
+                      {
+                        "Solid": "Plant_Crop_Mushroom_Block_Brown"
+                      }
+                    ]
+                  }
+                },
+                "Origin": {
+                  "Type": "BlockType",
+                  "Material": {
+                    "Solid": "Empty"
+                  }
+                },
+                "ExportAs": "P_Forest_Ground"
+              },
+              {
+                "Type": "Offset",
+                "Offset": {
+                  "Z": -3,
+                  "Y": -1
+                },
+                "Pattern": {
+                  "Type": "BlockSet",
+                  "BlockSet": {
+                    "Materials": [
+                      {
+                        "Solid": "Empty"
+                      },
+                      {
+                        "Solid": "Soil_Sand"
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "SouthPattern": {
+            "Type": "And",
+            "Patterns": [
+              {
+                "Type": "Imported",
+                "Name": "P_Forest_Ground"
+              },
+              {
+                "Type": "Offset",
+                "Offset": {
+                  "X": 0,
+                  "Y": -1,
+                  "Z": 3
+                },
+                "Pattern": {
+                  "Type": "BlockSet",
+                  "BlockSet": {
+                    "Materials": [
+                      {
+                        "Solid": "Empty"
+                      },
+                      {
+                        "Solid": "Soil_Sand"
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "EastPattern": {
+            "Type": "And",
+            "Patterns": [
+              {
+                "Type": "Imported",
+                "Name": "P_Forest_Ground"
+              },
+              {
+                "Type": "Offset",
+                "Offset": {
+                  "X": 3,
+                  "Y": -1,
+                  "Z": 0
+                },
+                "Pattern": {
+                  "Type": "BlockSet",
+                  "BlockSet": {
+                    "Materials": [
+                      {
+                        "Solid": "Empty"
+                      },
+                      {
+                        "Solid": "Soil_Sand"
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "WestPattern": {
+            "Type": "And",
+            "Patterns": [
+              {
+                "Type": "Imported",
+                "Name": "P_Forest_Ground"
+              },
+              {
+                "Type": "Offset",
+                "Offset": {
+                  "X": -3,
+                  "Y": -1,
+                  "Z": 0
+                },
+                "Pattern": {
+                  "Type": "BlockSet",
+                  "BlockSet": {
+                    "Materials": [
+                      {
+                        "Solid": "Empty"
+                      },
+                      {
+                        "Solid": "Soil_Sand"
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "Skip": false
+      },
+      {
+        "Type": "Prefab",
+        "Directionality": {
+          "Type": "Random",
+          "Pattern": {
+            "Type": "Floor",
+            "Floor": {
+              "Type": "BlockSet",
+              "BlockSet": {
+                "Materials": [
+                  {
+                    "Solid": "Soil_Grass"
+                  },
+                  {
+                    "Solid": "Soil_Snow"
+                  }
+                ]
+              }
+            },
+            "Origin": {
+              "Type": "BlockSet",
+              "BlockSet": {
+                "Materials": [
+                  {
+                    "Solid": "Empty"
+                  },
+                  {
+                    "Solid": "Plant_Bush_Green"
+                  },
+                  {
+                    "Solid": "Plant_Bush"
+                  },
+                  {
+                    "Solid": "Plant_Grass_Jungle_Short"
+                  },
+                  {
+                    "Solid": "Plant_Grass_Jungle_Tall"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "Scanner": {
+          "Type": "ColumnLinear",
+          "MinY": 0,
+          "MaxY": 50,
+          "RelativeToPosition": true
+        },
+        "WeightedPrefabPaths": [
+          {
+            "Path": "Trees/Redwood/Stage_1",
+            "Weight": 3
+          },
+          {
+            "Path": "Trees/Redwood/Stage_2",
+            "Weight": 2
+          },
+          {
+            "Path": "Trees/Redwood/Stage_3",
+            "Weight": 1
+          },
+          {
+            "Path": "Trees/Fir/Stage_1",
+            "Weight": 3
+          },
+          {
+            "Path": "Trees/Fir/Stage_2",
+            "Weight": 2
+          },
+          {
+            "Path": "Trees/Fir/Stage_3",
+            "Weight": 1
+          }
+        ]
+      }
+    ]
+  }
+}

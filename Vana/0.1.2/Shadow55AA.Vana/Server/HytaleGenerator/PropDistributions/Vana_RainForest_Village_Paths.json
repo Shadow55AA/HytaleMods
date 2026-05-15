@@ -1,0 +1,177 @@
+{
+  "Type": "Assigned",
+  "PropDistribution": {
+    "Type": "Positions",
+    "Positions": {
+      "Type": "Imported",
+      "Name": "Pos_Vana_RainForest_Village"
+    }
+  },
+  "Assignments": {
+    "Type": "FieldFunction",
+    "FieldFunction": {
+      "Type": "Axis",
+      "Axis": {
+        "Y": 1
+      },
+      "Curve": {
+        "Type": "Manual",
+        "Points": [
+          {
+            "Out": 0
+          },
+          {
+            "In": 1000,
+            "Out": 10
+          }
+        ]
+      }
+    },
+    "Delimiters": [
+      {
+        "Assignments": {
+          "Type": "Constant",
+          "Prop": {
+            "Type": "Density",
+            "Density": {
+              "Type": "Mix",
+              "Inputs": [
+                {
+                  "Type": "CurveMapper",
+                  "Inputs": [
+                    {
+                      "Type": "PositionsCellNoise",
+                      "Positions": {
+                        "Type": "Offset",
+                        "Positions": {
+                          "Type": "Imported",
+                          "Name": "Pos_Vana_RainForest_Village"
+                        },
+                        "Offset": {
+                          "X": 0,
+                          "Z": 20
+                        }
+                      },
+                      "DistanceFunction": {
+                        "Type": "Euclidean"
+                      },
+                      "ReturnType": {
+                        "Type": "Distance2Div"
+                      },
+                      "MaxDistance": 30
+                    }
+                  ],
+                  "Curve": {
+                    "Type": "Manual",
+                    "Points": [
+                      {
+                        "In": 0.3,
+                        "Out": -1
+                      },
+                      {
+                        "In": 1,
+                        "Out": 1
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Type": "Constant",
+                  "Value": -1
+                },
+                {
+                  "Type": "CurveMapper",
+                  "Inputs": [
+                    {
+                      "Type": "BaseHeight",
+                      "Skip": false,
+                      "BaseHeightName": "Bedrock",
+                      "Distance": true
+                    }
+                  ],
+                  "Curve": {
+                    "Type": "Manual",
+                    "Points": [
+                      {
+                        "In": 99,
+                        "Out": 1.1
+                      },
+                      {
+                        "In": 100,
+                        "Out": -0.1
+                      },
+                      {
+                        "In": 109,
+                        "Out": -0.1
+                      },
+                      {
+                        "In": 110,
+                        "Out": 1.1
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "Bounds": {
+              "PointA": {
+                "X": -25,
+                "Z": -25,
+                "Y": -2
+              },
+              "PointB": {
+                "X": 25,
+                "Z": 25,
+                "Y": 2
+              }
+            },
+            "Material": {
+              "Type": "Solidity",
+              "Solid": {
+                "Type": "Constant",
+                "Material": {
+                  "Solid": "Soil_Pathway"
+                }
+              }
+            },
+            "Scanner": {
+              "Type": "ColumnLinear",
+              "MaxY": 10,
+              "RelativeToPosition": true
+            },
+            "Pattern": {
+              "Type": "Imported",
+              "Name": "P_Floor_RainForest"
+            },
+            "Range": {
+              "X": 25,
+              "Y": 5,
+              "Z": 25
+            },
+            "PlacementMask": {
+              "DontReplace": {
+                "Inclusive": true,
+                "Materials": [
+                  {
+                    "Solid": "Empty"
+                  }
+                ]
+              },
+              "DontPlace": {
+                "Inclusive": true,
+                "Materials": [
+                  {
+                    "Solid": "Empty"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "Min": 0,
+        "Max": 0.75
+      }
+    ]
+  },
+  "ExportAs": "Vana_RainForest_Village_Paths"
+}

@@ -1,0 +1,169 @@
+{
+  "Type": "Assigned",
+  "PropDistribution": {
+    "Type": "Positions",
+    "Positions": {
+      "Type": "Jitter2d",
+      "Magnitude": 5,
+      "Positions": {
+        "Type": "Offset",
+        "Positions": {
+          "Type": "Scaler",
+          "Positions": {
+            "Type": "TriangularGrid2d"
+          },
+          "Scale": {
+            "X": 50,
+            "Z": 50,
+            "Y": 50
+          }
+        },
+        "Offset": {
+          "Y": 100,
+          "X": 0,
+          "Z": 25
+        }
+      },
+      "ExportAs": "Pos_Vana_RainForest_Village"
+    }
+  },
+  "Assignments": {
+    "Type": "FieldFunction",
+    "Delimiters": [
+      {
+        "Max": 0.05,
+        "Assignments": {
+          "Type": "Constant",
+          "Prop": {
+            "Type": "Prefab",
+            "WeightedPrefabPaths": [
+              {
+                "Path": "Monuments/Unique/Vana/RainForest/Village/Center"
+              }
+            ],
+            "Directionality": {
+              "Type": "Static",
+              "Pattern": {
+                "Type": "Floor",
+                "Floor": {
+                  "Type": "BlockSet",
+                  "BlockSet": {
+                    "Materials": [
+                      {
+                        "Solid": "Soil_Grass"
+                      },
+                      {
+                        "Solid": "Plant_Crop_Mushroom_Block_Brown"
+                      }
+                    ]
+                  }
+                },
+                "Origin": {
+                  "Type": "BlockType",
+                  "Material": {
+                    "Solid": "Empty"
+                  }
+                },
+                "ExportAs": "P_Floor_RainForest"
+              }
+            },
+            "Scanner": {
+              "Type": "ColumnLinear",
+              "RelativeToPosition": true,
+              "MaxY": 10
+            }
+          }
+        }
+      },
+      {
+        "Min": 0.05,
+        "Max": 0.75,
+        "Assignments": {
+          "Type": "Constant",
+          "Prop": {
+            "Type": "Queue",
+            "Props": [
+              {
+                "Type": "Locator",
+                "Prop": {
+                  "Type": "Prefab",
+                  "Scanner": {
+                    "Type": "ColumnLinear",
+                    "MinY": -5,
+                    "MaxY": 5,
+                    "RelativeToPosition": true
+                  },
+                  "Directionality": {
+                    "Type": "Random",
+                    "Pattern": {
+                      "Type": "Imported",
+                      "Name": "P_Floor_RainForest"
+                    }
+                  },
+                  "WeightedPrefabPaths": [
+                    {
+                      "Path": "Monuments/Unique/Vana/RainForest/Village/Market"
+                    }
+                  ]
+                },
+                "Pattern": {
+                  "Type": "Imported",
+                  "Name": "P_Floor_RainForest"
+                },
+                "Scanner": {
+                  "Type": "ColumnLinear",
+                  "MaxY": 10,
+                  "RelativeToPosition": true
+                },
+                "PlacementCap": 1
+              },
+              {
+                "Type": "Prefab",
+                "WeightedPrefabPaths": [
+                  {
+                    "Path": "Monuments/Unique/Vana/RainForest/Village/Market"
+                  },
+                  {
+                    "Path": "Monuments/Unique/Vana/RainForest/Village/Farm",
+                    "Weight": 2
+                  }
+                ],
+                "Scanner": {
+                  "Type": "ColumnLinear",
+                  "MaxY": 10,
+                  "RelativeToPosition": true
+                },
+                "Directionality": {
+                  "Type": "Random",
+                  "Pattern": {
+                    "Type": "Imported",
+                    "Name": "P_Floor_RainForest"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "FieldFunction": {
+      "Type": "Axis",
+      "Axis": {
+        "Y": 1
+      },
+      "Curve": {
+        "Type": "Manual",
+        "Points": [
+          {
+            "Out": 0
+          },
+          {
+            "In": 1000,
+            "Out": 10
+          }
+        ]
+      }
+    }
+  },
+  "ExportAs": "Vana_RainForest_Village"
+}

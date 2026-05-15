@@ -1,0 +1,9 @@
+{
+  "Type": "SimplexNoise2D",
+  "Scale": 250,
+  "ExportAs": "Vana_Caves_Collector_Map",
+  "Persistence": 0.8,
+  "Octaves": 2,
+  "Lacunarity": 1.5,
+  "Seed": "Caves_Collector"
+}

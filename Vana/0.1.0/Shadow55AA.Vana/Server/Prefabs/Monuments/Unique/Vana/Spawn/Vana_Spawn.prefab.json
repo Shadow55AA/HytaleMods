@@ -1,0 +1,302 @@
+{
+  "version": 8,
+  "blockIdVersion": 11,
+  "anchorX": 1,
+  "anchorY": 2,
+  "anchorZ": -1,
+  "blocks": [
+    {
+      "x": -5,
+      "y": 2,
+      "z": -2,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -5,
+      "y": 2,
+      "z": -1,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -5,
+      "y": 2,
+      "z": 0,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -4,
+      "y": 2,
+      "z": -3,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -4,
+      "y": 2,
+      "z": -2,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -4,
+      "y": 2,
+      "z": -1,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -4,
+      "y": 2,
+      "z": 0,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -4,
+      "y": 2,
+      "z": 1,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -3,
+      "y": 2,
+      "z": -4,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -3,
+      "y": 2,
+      "z": -3,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -3,
+      "y": 2,
+      "z": -2,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -3,
+      "y": 3,
+      "z": -2,
+      "name": "Forgotten_Temple_Portal_Exit",
+      "filler": 1023,
+      "rotation": 1
+    },
+    {
+      "x": -3,
+      "y": 2,
+      "z": -1,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -3,
+      "y": 3,
+      "z": -1,
+      "name": "Forgotten_Temple_Portal_Exit",
+      "filler": 31,
+      "rotation": 1
+    },
+    {
+      "x": -3,
+      "y": 2,
+      "z": 0,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -3,
+      "y": 3,
+      "z": 0,
+      "name": "Forgotten_Temple_Portal_Exit",
+      "filler": 63,
+      "rotation": 1
+    },
+    {
+      "x": -3,
+      "y": 2,
+      "z": 1,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -3,
+      "y": 2,
+      "z": 2,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -2,
+      "y": 2,
+      "z": -4,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -2,
+      "y": 2,
+      "z": -3,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -2,
+      "y": 2,
+      "z": -2,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -2,
+      "y": 3,
+      "z": -2,
+      "name": "Forgotten_Temple_Portal_Exit",
+      "filler": 992,
+      "rotation": 1
+    },
+    {
+      "x": -2,
+      "y": 2,
+      "z": -1,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -2,
+      "y": 3,
+      "z": -1,
+      "name": "Forgotten_Temple_Portal_Exit",
+      "rotation": 1
+    },
+    {
+      "x": -2,
+      "y": 2,
+      "z": 0,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -2,
+      "y": 3,
+      "z": 0,
+      "name": "Forgotten_Temple_Portal_Exit",
+      "filler": 32,
+      "rotation": 1
+    },
+    {
+      "x": -2,
+      "y": 2,
+      "z": 1,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -2,
+      "y": 2,
+      "z": 2,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -1,
+      "y": 2,
+      "z": -4,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -1,
+      "y": 2,
+      "z": -3,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -1,
+      "y": 2,
+      "z": -2,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -1,
+      "y": 3,
+      "z": -2,
+      "name": "Forgotten_Temple_Portal_Exit",
+      "filler": 993,
+      "rotation": 1
+    },
+    {
+      "x": -1,
+      "y": 2,
+      "z": -1,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -1,
+      "y": 3,
+      "z": -1,
+      "name": "Forgotten_Temple_Portal_Exit",
+      "filler": 1,
+      "rotation": 1
+    },
+    {
+      "x": -1,
+      "y": 2,
+      "z": 0,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -1,
+      "y": 3,
+      "z": 0,
+      "name": "Forgotten_Temple_Portal_Exit",
+      "filler": 33,
+      "rotation": 1
+    },
+    {
+      "x": -1,
+      "y": 2,
+      "z": 1,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -1,
+      "y": 2,
+      "z": 2,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": -3,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": -2,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": -1,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": 0,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": 1,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": -2,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": -1,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": 0,
+      "name": "Rock_Stone_Mossy"
+    }
+  ]
+}

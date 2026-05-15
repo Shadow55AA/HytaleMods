@@ -1,0 +1,281 @@
+{
+  "Type": "Cache",
+  "ExportAs": "Vana_Caves_Entrance_V1",
+  "Inputs": [
+    {
+      "$Comment": "Cull height",
+      "Type": "Mix",
+      "Inputs": [
+        {
+          "$Comment": "Cull near oceans",
+          "Type": "Mix",
+          "Inputs": [
+            {
+              "$Comment": "Cull near mountains",
+              "Type": "Mix",
+              "Inputs": [
+                {
+                  "$Comment": "Cull rivers",
+                  "Type": "Mix",
+                  "Inputs": [
+                    {
+                      "Type": "VectorWarp",
+                      "WarpVector": {
+                        "Y": -1
+                      },
+                      "WarpFactor": 40,
+                      "Inputs": [
+                        {
+                          "Type": "Sum",
+                          "Inputs": [
+                            {
+                              "Type": "CurveMapper",
+                              "Inputs": [
+                                {
+                                  "Type": "BaseHeight",
+                                  "Skip": false,
+                                  "BaseHeightName": "Bedrock",
+                                  "Distance": true
+                                }
+                              ],
+                              "Curve": {
+                                "Type": "Manual",
+                                "Points": [
+                                  {
+                                    "In": 40,
+                                    "Out": 1
+                                  },
+                                  {
+                                    "In": 42,
+                                    "Out": 0.1
+                                  },
+                                  {
+                                    "In": 48,
+                                    "Out": 0.1
+                                  },
+                                  {
+                                    "In": 50,
+                                    "Out": 1
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "Type": "CurveMapper",
+                              "Inputs": [
+                                {
+                                  "Type": "Abs",
+                                  "Inputs": [
+                                    {
+                                      "Type":	"SimplexNoise2D",
+                                      "Skip":	false,
+                                      "Lacunarity":	1.5,
+                                      "Persistence":	0.8,
+                                      "Octaves":	2,
+                                      "Scale":	200,
+                                      "Seed":	"A"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "Curve": {
+                                "Type": "Manual",
+                                "Points": [
+                                  {
+                                    "In": 0,
+                                    "Out": -0.9
+                                  },
+                                  {
+                                    "In": 0.1,
+                                    "Out": 0
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "Type": "Mix",
+                          "Inputs": [
+                            {
+                              "Type": "Imported",
+                              "Name": "Vana_Caves_Arterial_Warp"
+                            },{
+                              "Type": "CurveMapper",
+                              "Inputs": [
+                                {
+                                  "Type": "Imported",
+                                  "Name": "Vana_Caves_Arterial_Map"
+                                }
+                              ],
+                              "Curve": {
+                                "Type": "Manual",
+                                "Points": [
+                                  {
+                                    "In": -1,
+                                    "Out": 1.5
+                                  },
+                                  {
+                                    "In": 1,
+                                    "Out": 1.7
+                                  }
+                                ]
+                              }
+                            },{
+                              "Type": "CurveMapper",
+                              "Inputs": [
+                                {
+                                  "Type": "Abs",
+                                  "Inputs": [
+                                    {
+                                      "Type": "Imported",
+                                      "Name": "Vana_Caves_Arterial_Map"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "Curve":
+                              {
+                                "Type": "Manual",
+                                "Points": [
+                                  {
+                                    "In": 0.2,
+                                    "Out": -0.1
+                                  },
+                                  {
+                                    "In": 0.8,
+                                    "Out": 1.1
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },{
+                      "Type": "Constant",
+                      "Value": 1
+                    },{
+                      "Type": "CurveMapper",
+                      "Inputs": [
+                        {
+                          "Type": "Abs",
+                          "Inputs": [
+                            {
+                              "Type": "Imported",
+                              "Name": "Vana_Rivers"
+                            }
+                          ]
+                        }
+                      ],
+                      "Curve": {
+                        "Type": "Manual",
+                        "Points": [
+                          {
+                            "In": 0.05,
+                            "Out": 1.1
+                          },
+                          {
+                            "In": 0.06,
+                            "Out": -0.1
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },{
+                  "Type": "Constant",
+                  "Value": 1
+                },{
+                  "Type": "CurveMapper",
+                  "Inputs": [
+                    {
+                      "Type": "Imported",
+                      "Name": "Vana_Mountains_Mask"
+                    }
+                  ],
+                  "Curve": {
+                    "Type": "Manual",
+                    "Points": [
+                      {
+                        "In": 0.049,
+                        "Out": -0.1
+                      },
+                      {
+                        "In": 0.5,
+                        "Out": 1.1
+                      }
+                    ]
+                  }
+                }
+              ]
+            },{
+              "Type": "Constant",
+              "Value": 1
+            },{
+              "Type": "CurveMapper",
+              "Inputs": [
+                {
+                  "Type": "Abs",
+                  "Inputs": [
+                    {
+                      "Type": "Imported",
+                      "Name": "Vana_Landmap"
+                    }
+                  ]
+                }
+              ],
+              "Curve": {
+                "Type": "Manual",
+                "Points": [
+                  {
+                    "In": 0.15,
+                    "Out": 1.1
+                  },
+                  {
+                    "In": 0.16,
+                    "Out": -0.1
+                  }
+                ]
+              }
+            }
+          ]
+        },{
+          "Type": "Constant",
+          "Value": 1
+        },{
+          "Type": "CurveMapper",
+          "Inputs": [
+            {
+              "Type": "BaseHeight",
+              "Skip": false,
+              "BaseHeightName": "Bedrock",
+              "Distance": true
+            }
+          ],
+          "Curve": {
+            "Type": "Manual",
+            "Points": [
+              {
+                "In": 39,
+                "Out": 1.1
+              },
+              {
+                "In": 40,
+                "Out": -0.1
+              },
+              {
+                "In": 120,
+                "Out": -0.1
+              },
+              {
+                "In": 121,
+                "Out": 1.1
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "Terrain": {
+    "Type": "DAOTerrain",
+    "Density": {
+      "Type": "Min",
+      "Inputs": [
+        {
+          "Type": "Imported",
+          "Name": "Vana_Terrain"
+        },
+        {
+          "Type": "Imported",
+          "Name": "Vana_Caves_Arterial"
+        }
+      ]
+    }
+  },
+  "EnvironmentProvider": {
+    "Type": "Constant",
+    "Environment": "Env_Zone1_Forests"
+  },
+  "TintProvider": {
+    "Type": "Constant",
+    "Color": "#92db38"
+  },
+  "MaterialProvider": {
+    "Type": "Solidity",
+    "Solid": {
+      "Type": "Queue",
+      "Queue": [
+        {
+          "Type": "SpaceAndDepth",
+          "Layers": [
+            {
+              "Type": "ConstantThickness",
+              "Thickness": 1,
+              "Material": {
+                "Type": "Constant",
+                "Material": {
+                  "Solid": "Soil_Grass"
+                }
+              }
+            },
+            {
+              "Type": "ConstantThickness",
+              "Thickness": 4,
+              "Material": {
+                "Type": "Constant",
+                "Material": {
+                  "Solid": "Soil_Dirt"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Type": "Constant",
+          "Material": {
+            "Solid": "Rock_Stone"
+          }
+        }
+      ]
+    },
+    "Empty": {
+      "Type": "Queue",
+      "Queue": [
+        {
+          "Type": "Imported",
+          "Name": "Vana_Mat_Water"
+        },
+        {
+          "Type": "Constant",
+          "Material": {
+            "Solid": "Empty"
+          }
+        }
+      ]
+    }
+  },
+  "Props": [
+    {
+      "Runtime": 1,
+      "Positions": {
+        "Type": "FieldFunction",
+        "FieldFunction": {
+          "Type": "Sum",
+          "Inputs": [
+            {
+              "Type": "CurveMapper",
+              "Inputs": [
+                {
+                  "Type": "Imported",
+                  "Name": "Vana_WS_Density"
+                }
+              ],
+              "Curve": {
+                "Type": "Manual",
+                "Points": [
+                  {
+                    "In": 0.45,
+                    "Out": 0
+                  },
+                  {
+                    "In": 0.5,
+                    "Out": 1
+                  }
+                ]
+              }
+            },
+            {
+              "Type": "CurveMapper",
+              "Inputs": [
+                {
+                  "Type": "SimplexNoise2D",
+                  "Skip": false,
+                  "Lacunarity": 1,
+                  "Persistence": 1,
+                  "Octaves": 1,
+                  "Scale": 50,
+                  "Seed": "Shrubs"
+                }
+              ],
+              "Curve": {
+                "Type": "Manual",
+                "Points": [
+                  {
+                    "In": -1,
+                    "Out": 0
+                  },
+                  {
+                    "In": 1,
+                    "Out": 0.5
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "Delimiters": [
+          {
+            "Min": 0.5,
+            "Max": 1.5
+          }
+        ],
+        "Positions": {
+          "Type": "Mesh2D",
+          "PointsY": 98,
+          "PointGenerator": {
+            "Type": "Mesh",
+            "ScaleX": 10,
+            "ScaleY": 10,
+            "ScaleZ": 10,
+            "Jitter": 0.25,
+            "Seed": "Shrubs"
+          }
+        }
+      },
+      "Assignments": {
+        "Type": "Imported",
+        "Name": "Vana_Shrubland_Clusters"
+      }
+    },
+    {
+      "Positions": {
+        "Type": "Mesh2D",
+        "PointGenerator": {
+          "Type": "Mesh"
+        },
+        "PointsY": 98
+      },
+      "Assignments": {
+        "Type": "Imported",
+        "Name": "Vana_Shrubland_Trees"
+      },
+      "Runtime": 2
+    }
+  ]
+}

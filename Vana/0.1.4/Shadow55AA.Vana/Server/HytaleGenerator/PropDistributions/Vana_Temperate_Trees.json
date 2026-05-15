@@ -1,0 +1,126 @@
+{
+  "Type": "Assigned",
+  "PropDistribution": {
+    "Type": "Positions",
+    "Positions": {
+      "Type": "FieldFunction",
+      "Positions": {
+        "Type": "Occurrence",
+        "Positions": {
+          "Type": "Mesh2D",
+          "PointGenerator": {
+            "Type": "Mesh",
+            "ScaleX": 15,
+            "ScaleY": 15,
+            "ScaleZ": 15,
+            "Seed": "Trees"
+          },
+          "PointsY": 99
+        },
+        "FieldFunction": {
+          "Type": "CurveMapper",
+          "Inputs": [
+            {
+              "Type": "Imported",
+              "Name": "Vana_WS_Density"
+            }
+          ],
+          "Curve": {
+            "Type": "Manual",
+            "Points": [
+              {
+                "In": 0.5,
+                "Out": 0.1
+              },
+              {
+                "In": 0.65,
+                "Out": 1
+              }
+            ]
+          }
+        }
+      },
+      "Delimiters": [
+        {
+          "Min": -0.3,
+          "Max": 1
+        }
+      ],
+      "FieldFunction": {
+        "Type": "SimplexNoise2D",
+        "Scale": 500,
+        "Seed": "Openings"
+      }
+    }
+  },
+  "Assignments": {
+    "Type": "Constant",
+    "Prop": {
+      "Type": "Queue",
+      "Props": [
+        {
+          "Type": "Prefab",
+          "Directionality": {
+            "Type": "Random",
+            "Pattern": {
+              "Type": "Floor",
+              "Floor": {
+                "Type": "BlockSet",
+                "BlockSet": {
+                  "Materials": [
+                    {
+                      "Solid": "Soil_Grass"
+                    }
+                  ]
+                }
+              },
+              "Origin": {
+                "Type": "BlockSet",
+                "BlockSet": {
+                  "Materials": [
+                    {
+                      "Solid": "Empty"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Scanner": {
+            "Type": "ColumnLinear",
+            "MinY": 0,
+            "MaxY": 50,
+            "RelativeToPosition": true
+          },
+          "WeightedPrefabPaths": [
+            {
+              "Path": "Trees/Maple/Stage_1",
+              "Weight": 1
+            },
+            {
+              "Path": "Trees/Maple/Stage_2",
+              "Weight": 2
+            },
+            {
+              "Path": "Trees/Aspen/Stage_2",
+              "Weight": 4
+            },
+            {
+              "Path": "Trees/Aspen/Stage_3",
+              "Weight": 2
+            },
+            {
+              "Path": "Trees/Birch/Stage_2",
+              "Weight": 4
+            },
+            {
+              "Path": "Trees/Birch/Stage_3",
+              "Weight": 2
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "ExportAs": "PD_Vana_Temperate_Trees"
+}

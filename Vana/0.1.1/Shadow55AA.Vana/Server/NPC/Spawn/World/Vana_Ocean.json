@@ -1,0 +1,27 @@
+{
+  "NPCs": [
+    {
+      "Id": "Shark_Hammerhead",
+      "Weight": 1
+    },
+    {
+      "Id": "Eel_Moray",
+      "Weight": 1
+    },
+    {
+      "Id": "Whale_Humpback",
+      "Weight": 1
+    },
+    {
+      "Id": "Trilobite",
+      "Weight": 1
+    }
+  ],
+  "DayTimeRange": [
+    0,
+    24
+  ],
+  "Environments": [
+    "Env_Vana_Ocean"
+  ]
+}

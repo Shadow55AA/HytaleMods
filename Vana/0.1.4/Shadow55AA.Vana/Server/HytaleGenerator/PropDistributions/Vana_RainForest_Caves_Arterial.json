@@ -1,0 +1,374 @@
+{
+  "Type": "Union",
+  "ExportAs": "PD_Vana_RainForest_Caves_Arterial",
+  "PropDistributions": [
+    {
+      "Type": "Assigned",
+      "PropDistribution": {
+        "Type": "Positions",
+        "Positions": {
+          "Type": "Jitter2d",
+          "Magnitude": 4,
+          "Positions": {
+            "Type": "Offset",
+            "Offset": {
+              "Y": 40
+            },
+            "Positions": {
+              "Type": "Scaler",
+              "Scale": {
+                "X": 10,
+                "Y": 10,
+                "Z": 10
+              },
+              "Positions": {
+                "Type": "TriangularGrid2d"
+              }
+            }
+          }
+        }
+      },
+      "Assignments": {
+        "Type": "FieldFunction",
+        "FieldFunction": {
+          "Type": "Imported",
+          "Name": "Vana_Caves_Arterial_Map"
+        },
+        "Delimiters": [
+          {
+            "Min": -0.1,
+            "Max": 0.1,
+            "Assignments": {
+              "Type": "Constant",
+              "Prop": {
+                "Type": "Union",
+                "Props": [
+                  {
+                    "Type": "Cluster",
+                    "Scanner": {
+                      "Type": "ColumnLinear",
+                      "MaxY": 40,
+                      "RelativeToPosition": true
+                    },
+                    "WeightedProps": [
+                      {
+                        "ColumnProp": {
+                          "Type": "Column",
+                          "Scanner": {
+                            "Type": "ColumnLinear",
+                            "MinY": -5,
+                            "MaxY": 5,
+                            "RelativeToPosition": true
+                          },
+                          "Directionality": {
+                            "Type": "Static",
+                            "Pattern": {
+                              "Type": "Imported",
+                              "Name": "P_Ceiling_Stone"
+                            }
+                          },
+                          "ColumnBlocks": [
+                            {
+                              "Y": 1,
+                              "Material": {
+                                "Solid": "Rock_Stone_Mossy"
+                              }
+                            }
+                          ]
+                        },
+                        "Weight": 3
+                      },
+                      {
+                        "ColumnProp": {
+                          "Type": "Column",
+                          "Directionality": {
+                            "Type": "Static",
+                            "Pattern": {
+                              "Type": "Imported",
+                              "Name": "P_Ceiling_Stone"
+                            }
+                          },
+                          "Scanner": {
+                            "Type": "ColumnLinear",
+                            "RelativeToPosition": true,
+                            "MinY": -5,
+                            "MaxY": 5
+                          },
+                          "ColumnBlocks": [
+                            {
+                              "Y": 0,
+                              "Material": {
+                                "SolidBottomUp": true,
+                                "Solid": "Rock_Stone_Stalactite_Small"
+                              }
+                            },
+                            {
+                              "Y": 1,
+                              "Material": {
+                                "Solid": "Rock_Stone_Mossy"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "Pattern": {
+                      "Type": "Ceiling",
+                      "Ceiling": {
+                        "Type": "BlockType",
+                        "Material": {
+                          "Solid": "Rock_Stone"
+                        }
+                      },
+                      "Origin": {
+                        "Type": "BlockType",
+                        "Material": {
+                          "Solid": "Empty"
+                        }
+                      },
+                      "ExportAs": "P_Ceiling_Stone"
+                    },
+                    "DistanceCurve": {
+                      "Type": "DistanceExponential",
+                      "Range": 5,
+                      "Exponent": 0.5
+                    },
+                    "Range": 5
+                  },
+                  {
+                    "Type": "Column",
+                    "Directionality": {
+                      "Type": "Static",
+                      "Pattern": {
+                        "Type": "Imported",
+                        "Name": "P_Ceiling_Stone"
+                      }
+                    },
+                    "Scanner": {
+                      "Type": "ColumnLinear",
+                      "MaxY": 40,
+                      "RelativeToPosition": true
+                    },
+                    "ColumnBlocks": [
+                      {
+                        "Y": 0,
+                        "Material": {
+                          "Solid": "Rock_Stone_Stalactite_Large",
+                          "SolidBottomUp": true
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "Type": "Cluster",
+                    "Scanner": {
+                      "Type": "ColumnLinear",
+                      "MaxY": 40,
+                      "RelativeToPosition": true
+                    },
+                    "WeightedProps": [
+                      {
+                        "ColumnProp": {
+                          "Type": "Column",
+                          "Scanner": {
+                            "Type": "ColumnLinear",
+                            "MinY": -5,
+                            "MaxY": 5,
+                            "RelativeToPosition": true
+                          },
+                          "Directionality": {
+                            "Type": "Static",
+                            "Pattern": {
+                              "Type": "Imported",
+                              "Name": "P_Floor_Stone"
+                            }
+                          },
+                          "ColumnBlocks": [
+                            {
+                              "Y": -1,
+                              "Material": {
+                                "Solid": "Rock_Stone_Mossy"
+                              }
+                            }
+                          ]
+                        },
+                        "Weight": 3
+                      },
+                      {
+                        "ColumnProp": {
+                          "Type": "Column",
+                          "Directionality": {
+                            "Type": "Static",
+                            "Pattern": {
+                              "Type": "Imported",
+                              "Name": "P_Floor_Stone"
+                            }
+                          },
+                          "Scanner": {
+                            "Type": "ColumnLinear",
+                            "RelativeToPosition": true,
+                            "MinY": -5,
+                            "MaxY": 5
+                          },
+                          "ColumnBlocks": [
+                            {
+                              "Y": 0,
+                              "Material": {
+                                "Solid": "Rock_Stone_Stalactite_Small"
+                              }
+                            },
+                            {
+                              "Y": -1,
+                              "Material": {
+                                "Solid": "Rock_Stone_Mossy"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "Pattern": {
+                      "Type": "Imported",
+                      "Name": "P_Floor_Stone"
+                    },
+                    "DistanceCurve": {
+                      "Type": "DistanceExponential",
+                      "Range": 5,
+                      "Exponent": 0.5
+                    },
+                    "Range": 5
+                  },
+                  {
+                    "Type": "Column",
+                    "Directionality": {
+                      "Type": "Static",
+                      "Pattern": {
+                        "Type": "Imported",
+                        "Name": "P_Floor_Stone"
+                      }
+                    },
+                    "Scanner": {
+                      "Type": "ColumnLinear",
+                      "MaxY": 40,
+                      "RelativeToPosition": true
+                    },
+                    "ColumnBlocks": [
+                      {
+                        "Y": 0,
+                        "Material": {
+                          "Solid": "Rock_Stone_Stalactite_Large"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Type": "Assigned",
+      "PropDistribution": {
+        "Type": "Positions",
+        "Positions": {
+          "Type": "FieldFunction",
+          "FieldFunction": {
+            "Type": "Imported",
+            "Name": "Vana_Caves_Arterial_Map"
+          },
+          "Delimiters": [
+            {
+              "Min": -0.03,
+              "Max": 0.03
+            }
+          ],
+          "Positions": {
+            "Type": "Jitter2d",
+            "Magnitude": 4,
+            "Positions": {
+              "Type": "Offset",
+              "Offset": {
+                "Y": 40
+              },
+              "Positions": {
+                "Type": "Scaler",
+                "Scale": {
+                  "X": 20,
+                  "Y": 20,
+                  "Z": 20
+                },
+                "Positions": {
+                  "Type": "TriangularGrid2d"
+                }
+              }
+            }
+          }
+        }
+      },
+      "Assignments": {
+        "Type": "Constant",
+        "Prop": {
+          "Type": "Cluster",
+          "Range": 3,
+          "DistanceCurve": {
+            "Type": "DistanceExponential",
+            "Exponent": 0.5,
+            "Range": 3
+          },
+          "WeightedProps": [
+            {
+              "ColumnProp": {
+                "Type": "Column",
+                "Scanner": {
+                  "Type": "ColumnLinear",
+                  "MinY": -5,
+                  "MaxY": 5,
+                  "RelativeToPosition": true
+                },
+                "Directionality": {
+                  "Type": "Static",
+                  "Pattern": {
+                    "Type": "Imported",
+                    "Name": "P_Floor_Stone"
+                  }
+                },
+                "ColumnBlocks": [
+                  {
+                    "Y": -1,
+                    "Material": {
+                      "Solid": "Rock_Stone_Half",
+                      "Fluid": "Water_Source"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "Scanner": {
+            "Type": "ColumnLinear",
+            "MaxY": 40,
+            "RelativeToPosition": true
+          },
+          "Pattern": {
+            "Type": "Floor",
+            "Floor": {
+              "Type": "BlockType",
+              "Material": {
+                "Solid": "Rock_Stone"
+              }
+            },
+            "Origin": {
+              "Type": "BlockType",
+              "Material": {
+                "Solid": "Empty"
+              }
+            },
+            "ExportAs": "P_Floor_Stone"
+          }
+        }
+      }
+    }
+  ]
+}

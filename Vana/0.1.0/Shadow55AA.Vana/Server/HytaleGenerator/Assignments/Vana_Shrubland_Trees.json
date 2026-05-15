@@ -1,0 +1,42 @@
+{
+  "Type": "Constant",
+  "ExportAs": "Vana_Shrubland_Trees",
+  "Prop": {
+    "Type": "Prefab",
+    "WeightedPrefabPaths": [
+      {
+        "Path": "Trees/Gum/Stage_1"
+      },
+      {
+        "Path": "Trees/Gum/Stage_3"
+      },
+      {
+        "Path": "Trees/Gum/Stage_4"
+      }
+    ],
+    "Scanner": {
+      "Type": "ColumnLinear",
+      "RelativeToPosition": true,
+      "MinY": 0,
+      "MaxY": 120
+    },
+    "Directionality": {
+      "Type": "Random",
+      "Pattern": {
+        "Type": "Floor",
+        "Floor": {
+          "Type": "BlockType",
+          "Material": {
+            "Solid": "Soil_Grass"
+          }
+        },
+        "Origin": {
+          "Type": "BlockType",
+          "Material": {
+            "Solid": "Empty"
+          }
+        }
+      }
+    }
+  }
+}

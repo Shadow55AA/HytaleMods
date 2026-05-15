@@ -1,0 +1,64 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.Soil_Dirt_Cracked.name"
+  },
+  "ItemLevel": 11,
+  "Parent": "Template_Soil",
+  "Icon": "Icons/ItemsGenerated/Soil_Dirt_Cracked.png",
+  "Recipe": {
+    "TimeSeconds": 0,
+    "Input": [
+      {
+        "ResourceTypeId": "Soils",
+        "Quantity": 1
+      },
+      {
+        "ItemId": "Ingredient_Fibre",
+        "Quantity": 1
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Id": "Farmingbench",
+        "Categories": [
+          "Decorative"
+        ]
+      }
+    ]
+  },
+  "BlockType": {
+    "Textures": [
+      {
+        "All": "BlockTextures/Soil_Dirt_Cracked.png",
+        "Weight": 1
+      }
+    ],
+    "ParticleColor": "#b8a852",
+    "TransitionTexture": "BlockTextures/Transition_Soil_Dirt_Cracked.png",
+    "Parent": "Soil_Dirt_Dry"
+  },
+  "Tags": {
+    "Type": [
+      "Soil"
+    ],
+    "Family": [
+      "Dirt"
+    ],
+    "Spreadable": [
+      "Grass_Dry"
+    ]
+  },
+  "IconProperties": {
+    "Scale": 0.58823,
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ],
+    "Translation": [
+      0,
+      -13.5
+    ]
+  }
+}

@@ -1,0 +1,443 @@
+{
+  "WaterTint": "#2076b5",
+  "SpawnDensity": 2,
+  "WeatherForecasts": {
+    "0": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 5
+      },
+      {
+        "WeatherId": "Zone1_Rain_Light",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Rain",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Storm",
+        "Weight": 10
+      }
+    ],
+    "1": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 5
+      },
+      {
+        "WeatherId": "Zone1_Rain_Light",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Rain",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Storm",
+        "Weight": 10
+      }
+    ],
+    "2": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 5
+      },
+      {
+        "WeatherId": "Zone1_Rain_Light",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Rain",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Storm",
+        "Weight": 10
+      }
+    ],
+    "3": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 5
+      },
+      {
+        "WeatherId": "Zone1_Rain_Light",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Rain",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Storm",
+        "Weight": 10
+      }
+    ],
+    "4": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 5
+      },
+      {
+        "WeatherId": "Zone1_Rain_Light",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Rain",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Storm",
+        "Weight": 10
+      }
+    ],
+    "5": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 5
+      },
+      {
+        "WeatherId": "Zone1_Rain_Light",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Rain",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Storm",
+        "Weight": 10
+      }
+    ],
+    "6": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 5
+      },
+      {
+        "WeatherId": "Zone1_Rain_Light",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Rain",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Storm",
+        "Weight": 10
+      }
+    ],
+    "7": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 5
+      },
+      {
+        "WeatherId": "Zone1_Rain_Light",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Rain",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Storm",
+        "Weight": 10
+      }
+    ],
+    "8": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 5
+      },
+      {
+        "WeatherId": "Zone1_Rain_Light",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Rain",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Storm",
+        "Weight": 10
+      }
+    ],
+    "9": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 5
+      },
+      {
+        "WeatherId": "Zone1_Rain_Light",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Rain",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Storm",
+        "Weight": 10
+      }
+    ],
+    "10": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 5
+      },
+      {
+        "WeatherId": "Zone1_Rain_Light",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Rain",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Storm",
+        "Weight": 10
+      }
+    ],
+    "11": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 5
+      },
+      {
+        "WeatherId": "Zone1_Rain_Light",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Rain",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Storm",
+        "Weight": 10
+      }
+    ],
+    "12": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 5
+      },
+      {
+        "WeatherId": "Zone1_Rain_Light",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Rain",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Storm",
+        "Weight": 10
+      }
+    ],
+    "13": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 5
+      },
+      {
+        "WeatherId": "Zone1_Rain_Light",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Rain",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Storm",
+        "Weight": 10
+      }
+    ],
+    "14": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 5
+      },
+      {
+        "WeatherId": "Zone1_Rain_Light",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Rain",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Storm",
+        "Weight": 10
+      }
+    ],
+    "15": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 5
+      },
+      {
+        "WeatherId": "Zone1_Rain_Light",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Rain",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Storm",
+        "Weight": 10
+      }
+    ],
+    "16": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 5
+      },
+      {
+        "WeatherId": "Zone1_Rain_Light",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Rain",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Storm",
+        "Weight": 10
+      }
+    ],
+    "17": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 5
+      },
+      {
+        "WeatherId": "Zone1_Rain_Light",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Rain",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Storm",
+        "Weight": 10
+      }
+    ],
+    "18": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 5
+      },
+      {
+        "WeatherId": "Zone1_Rain_Light",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Rain",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Storm",
+        "Weight": 10
+      }
+    ],
+    "19": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 5
+      },
+      {
+        "WeatherId": "Zone1_Rain_Light",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Rain",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Storm",
+        "Weight": 10
+      }
+    ],
+    "20": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 5
+      },
+      {
+        "WeatherId": "Zone1_Rain_Light",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Rain",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Storm",
+        "Weight": 10
+      }
+    ],
+    "21": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 5
+      },
+      {
+        "WeatherId": "Zone1_Rain_Light",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Rain",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Storm",
+        "Weight": 10
+      }
+    ],
+    "22": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 5
+      },
+      {
+        "WeatherId": "Zone1_Rain_Light",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Rain",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Storm",
+        "Weight": 10
+      }
+    ],
+    "23": [
+      {
+        "WeatherId": "Cloudforest_Sunny",
+        "Weight": 5
+      },
+      {
+        "WeatherId": "Zone1_Rain_Light",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Rain",
+        "Weight": 30
+      },
+      {
+        "WeatherId": "Zone1_Storm",
+        "Weight": 10
+      }
+    ]
+  },
+  "Tags": {
+    "Rainforest": [
+      "Mountains"
+    ]
+  }
+}

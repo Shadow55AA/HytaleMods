@@ -1,0 +1,286 @@
+{
+  "Type": "Cache",
+  "ExportAs": "Vana_Caves_Entrance_V2",
+  "Inputs": [
+    {
+      "$Comment": "Cull height",
+      "Type": "Mix",
+      "Inputs": [
+        {
+          "$Comment": "Cull near oceans",
+          "Type": "Mix",
+          "Inputs": [
+            {
+              "$Comment": "Cull near mountains",
+              "Type": "Mix",
+              "Inputs": [
+                {
+                  "$Comment": "Cull rivers",
+                  "Type": "Mix",
+                  "Inputs": [
+                    {
+                      "Type": "Mix",
+                      "Inputs": [
+                        {
+                          "Type": "Sum",
+                          "Inputs": [
+                            {
+                              "Type": "CurveMapper",
+                              "Inputs": [
+                                {
+                                  "Type": "Abs",
+                                  "Inputs": [
+                                    {
+                                      "Type": "Imported",
+                                      "Name": "Vana_Caves_Arterial_Map"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "Curve": {
+                                "Type": "Manual",
+                                "Points": [
+                                  {
+                                    "In": 0,
+                                    "Out": -1
+                                  },
+                                  {
+                                    "In": 0.1,
+                                    "Out": 1
+                                  }
+                                ]
+                              }
+                            },{
+                              "Type": "CurveMapper",
+                              "Inputs": [
+                                {
+                                  "Type": "BaseHeight",
+                                  "Skip": false,
+                                  "BaseHeightName": "Bedrock",
+                                  "Distance": true
+                                }
+                              ],
+                              "Curve": {
+                                "Type": "Manual",
+                                "Points": [
+                                  {
+                                    "In": 40,
+                                    "Out": 1
+                                  },
+                                  {
+                                    "In": 120,
+                                    "Out": -1
+                                  }
+                                ]
+                              }
+                            },{
+                              "Type": "CurveMapper",
+                              "Inputs": [
+                                {
+                                  "Type":	"SimplexNoise2D",
+                                  "Skip":	false,
+                                  "Lacunarity":	1,
+                                  "Persistence":	1,
+                                  "Octaves":	1,
+                                  "Scale":	20,
+                                  "Seed":	"A"
+                                }
+                              ],
+                              "Curve": {
+                                "Type": "Manual",
+                                "Points": [
+                                  {
+                                    "In": 0,
+                                    "Out": 0
+                                  },
+                                  {
+                                    "In": 0.01,
+                                    "Out": 0.2
+                                  },
+                                  {
+                                    "In": 0.3,
+                                    "Out": 0.2
+                                  },
+                                  {
+                                    "In": 0.31,
+                                    "Out": 0.4
+                                  },
+                                  {
+                                    "In": 0.6,
+                                    "Out": 0.4
+                                  },
+                                  {
+                                    "In": 0.61,
+                                    "Out": 1
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "Type": "Constant",
+                          "Value": 1
+                        },{
+                          "Type": "CurveMapper",
+                          "Inputs": [
+                            {
+                              "Type":	"SimplexNoise2D",
+                              "Skip":	false,
+                              "Lacunarity":	1,
+                              "Persistence":	1,
+                              "Octaves":	1,
+                              "Scale":	150,
+                              "Seed":	"Blank"
+                            }
+                          ],
+                          "Curve": {
+                            "Type": "Manual",
+                            "Points": [
+                              {
+                                "In": 0.5,
+                                "Out": 1.1
+                              },
+                              {
+                                "In": 0.51,
+                                "Out": -0.1
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "Type": "Constant",
+                      "Value": 1
+                    },
+                    {
+                      "Type": "CurveMapper",
+                      "Inputs": [
+                        {
+                          "Type": "Abs",
+                          "Inputs": [
+                            {
+                              "Type": "Imported",
+                              "Name": "Vana_Rivers"
+                            }
+                          ]
+                        }
+                      ],
+                      "Curve": {
+                        "Type": "Manual",
+                        "Points": [
+                          {
+                            "In": 0.05,
+                            "Out": 1.1
+                          },
+                          {
+                            "In": 0.06,
+                            "Out": -0.1
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "Type": "Constant",
+                  "Value": 1
+                },
+                {
+                  "Type": "CurveMapper",
+                  "Inputs": [
+                    {
+                      "Type": "Imported",
+                      "Name": "Vana_Mountains_Mask"
+                    }
+                  ],
+                  "Curve": {
+                    "Type": "Manual",
+                    "Points": [
+                      {
+                        "In": 0.049,
+                        "Out": -0.1
+                      },
+                      {
+                        "In": 0.5,
+                        "Out": 1.1
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "Type": "Constant",
+              "Value": 1
+            },
+            {
+              "Type": "CurveMapper",
+              "Inputs": [
+                {
+                  "Type": "Abs",
+                  "Inputs": [
+                    {
+                      "Type": "Imported",
+                      "Name": "Vana_Landmap"
+                    }
+                  ]
+                }
+              ],
+              "Curve": {
+                "Type": "Manual",
+                "Points": [
+                  {
+                    "In": 0.15,
+                    "Out": 1.1
+                  },
+                  {
+                    "In": 0.16,
+                    "Out": -0.1
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "Type": "Constant",
+          "Value": 1
+        },
+        {
+          "Type": "CurveMapper",
+          "Inputs": [
+            {
+              "Type": "BaseHeight",
+              "Skip": false,
+              "BaseHeightName": "Bedrock",
+              "Distance": true
+            }
+          ],
+          "Curve": {
+            "Type": "Manual",
+            "Points": [
+              {
+                "In": 39,
+                "Out": 1.1
+              },
+              {
+                "In": 40,
+                "Out": -0.1
+              },
+              {
+                "In": 120,
+                "Out": -0.1
+              },
+              {
+                "In": 121,
+                "Out": 1.1
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

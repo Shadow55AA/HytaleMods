@@ -1,0 +1,31 @@
+{
+  "Environments": [
+    "Env_Vana_RainForest_Shores"
+  ],
+  "NPCs": [
+    {
+      "Id": "Jellyfish_Blue",
+      "Weight": 1
+    },
+    {
+      "Id": "Jellyfish_Cyan",
+      "Weight": 1
+    },
+    {
+      "Id": "Jellyfish_Green",
+      "Weight": 1
+    },
+    {
+      "Id": "Jellyfish_Red",
+      "Weight": 1
+    },
+    {
+      "Id": "Jellyfish_Yellow",
+      "Weight": 1
+    }
+  ],
+  "DayTimeRange": [
+    0,
+    24
+  ]
+}

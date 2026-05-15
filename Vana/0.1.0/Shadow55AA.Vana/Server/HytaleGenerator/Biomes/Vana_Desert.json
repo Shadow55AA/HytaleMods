@@ -1,0 +1,547 @@
+{
+  "Terrain": {
+    "Type": "DAOTerrain",
+    "Density": {
+      "Type": "Min",
+      "Inputs": [
+        {
+          "Type": "Sum",
+          "Inputs": [
+            {
+              "Type": "Multiplier",
+              "Inputs": [
+                {
+                  "Type": "Multiplier",
+                  "ExportAs": "Vana_Masked_Mountains",
+                  "Inputs": [
+                    {
+                      "Type": "CurveMapper",
+                      "ExportAs": "Vana_Mountains_Mask",
+                      "Inputs": [
+                        {
+                          "Type": "Abs",
+                          "Inputs": [
+                            {
+                              "Type": "SimplexNoise2D",
+                              "Skip": false,
+                              "Lacunarity": 2,
+                              "Persistence": 0.9,
+                              "Octaves": 1,
+                              "Scale": 2500,
+                              "Seed": "A"
+                            }
+                          ]
+                        }
+                      ],
+                      "Curve": {
+                        "Type": "Manual",
+                        "Points": [
+                          {
+                            "In": 0.1,
+                            "Out": 1
+                          },
+                          {
+                            "In": 0.2,
+                            "Out": 0.4
+                          },
+                          {
+                            "In": 0.3,
+                            "Out": 0.2
+                          },
+                          {
+                            "In": 0.4,
+                            "Out": 0
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "Type": "CurveMapper",
+                      "Inputs": [
+                        {
+                          "Type": "Imported",
+                          "Name": "Vana_Landmap"
+                        }
+                      ],
+                      "Curve": {
+                        "Type": "Manual",
+                        "Points": [
+                          {
+                            "In": 0.013,
+                            "Out": -0.45
+                          },
+                          {
+                            "In": 0.015,
+                            "Out": 0
+                          },
+                          {
+                            "In": 0.15,
+                            "Out": 0
+                          },
+                          {
+                            "In": 0.3,
+                            "Out": 0.1
+                          },
+                          {
+                            "In": 0.35,
+                            "Out": 0.2
+                          },
+                          {
+                            "In": 0.4,
+                            "Out": 0.3
+                          },
+                          {
+                            "In": 0.45,
+                            "Out": 0.2
+                          },
+                          {
+                            "In": 0.5,
+                            "Out": 0.1
+                          },
+                          {
+                            "In": 0.55,
+                            "Out": 0
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "Type": "CurveMapper",
+                  "Inputs": [
+                    {
+                      "Type":	"SimplexNoise2D",
+                      "Skip":	false,
+                      "Lacunarity":	2,
+                      "Persistence":	0.5,
+                      "Octaves":	2,
+                      "Scale":	50,
+                      "Seed":	"Dunes"
+                    }
+                  ],
+                  "Curve": {
+                    "Type": "Manual",
+                    "Points": [
+                      {
+                        "In": -1,
+                        "Out": 0
+                      },
+                      {
+                        "In": 1,
+                        "Out": 1
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "Type": "CurveMapper",
+              "Inputs": [
+                {
+                  "Type": "Imported",
+                  "Name": "Vana_Landmap"
+                }
+              ],
+              "Curve": {
+                "Type": "Manual",
+                "Points": [
+                  {
+                    "In": 0,
+                    "Out": -0.5
+                  },
+                  {
+                    "In": 0.05,
+                    "Out": -0.48
+                  },
+                  {
+                    "In": 0.055,
+                    "Out": -0.37
+                  },
+                  {
+                    "In": 0.1,
+                    "Out": -0.33
+                  },
+                  {
+                    "In": 0.2,
+                    "Out": -0.32
+                  },
+                  {
+                    "In": 0.4,
+                    "Out": -0.31
+                  },
+                  {
+                    "In": 1,
+                    "Out": -0.3
+                  }
+                ]
+              }
+            },
+            {
+              "Type": "Multiplier",
+              "Inputs": [
+                {
+                  "Type": "CurveMapper",
+                  "Inputs": [
+                    {
+                      "Type": "Abs",
+                      "Inputs": [
+                        {
+                          "Type": "Imported",
+                          "Name": "Vana_Masked_Mountains"
+                        }
+                      ]
+                    }
+                  ],
+                  "Curve": {
+                    "Type": "Manual",
+                    "Points": [
+                      {
+                        "In": 0.005,
+                        "Out": 1
+                      },
+                      {
+                        "In": 0.05,
+                        "Out": 0
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Type": "CurveMapper",
+                  "Inputs": [
+                    {
+                      "Type": "Abs",
+                      "Inputs": [
+                        {
+                          "Type": "Imported",
+                          "Name": "Vana_Rivers"
+                        }
+                      ]
+                    }
+                  ],
+                  "Curve": {
+                    "Type": "Manual",
+                    "Points": [
+                      {
+                        "In": 0,
+                        "Out": -0.05
+                      },
+                      {
+                        "In": 0.05,
+                        "Out": 0
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "Type": "CurveMapper",
+              "Inputs": [
+                {
+                  "Type": "BaseHeight",
+                  "Skip": false,
+                  "BaseHeightName": "Base",
+                  "Distance": true
+                }
+              ],
+              "Curve": {
+                "Type": "Manual",
+                "Points": [
+                  {
+                    "In": -100,
+                    "Out": 1
+                  },
+                  {
+                    "In": 200,
+                    "Out": -1
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "Type": "Imported",
+          "Name": "Vana_Caves_Arterial"
+        }
+      ]
+    }
+  },
+  "EnvironmentProvider": {
+    "Type": "Constant",
+    "Environment": "Env_Zone1_Forests"
+  },
+  "TintProvider": {
+    "Type": "Constant",
+    "Color": "#ec8f1b"
+  },
+  "MaterialProvider": {
+    "Type": "Solidity",
+    "Solid": {
+      "Type": "Queue",
+      "Queue": [
+        {
+          "Type": "SimpleHorizontal",
+          "BottomY": 100,
+          "TopY": 200,
+          "Material": {
+            "Type": "FieldFunction",
+            "FieldFunction": {
+              "Type": "Sum",
+              "Inputs": [
+                {
+                  "Type": "Abs",
+                  "Inputs": [
+                    {
+                      "Type": "SimplexNoise2D",
+                      "Skip": false,
+                      "Lacunarity": 1,
+                      "Persistence": 1,
+                      "Octaves": 1,
+                      "Scale": 100,
+                      "Seed": "Cracks"
+                    }
+                  ]
+                },
+                {
+                  "Type": "CurveMapper",
+                  "Inputs": [
+                    {
+                      "Type": "Imported",
+                      "Name": "Vana_WS_Density"
+                    }
+                  ],
+                  "Curve": {
+                    "Type": "Manual",
+                    "Points": [
+                      {
+                        "In": 0.33,
+                        "Out": 0
+                      },
+                      {
+                        "In": 0.35,
+                        "Out": 1
+                      },
+                      {
+                        "In": 0.37,
+                        "Out": 0
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "Delimiters": [
+              {
+                "From": 0,
+                "To": 0.3,
+                "Material": {
+                  "Type": "SpaceAndDepth",
+                  "Layers": [
+                    {
+                      "Type": "ConstantThickness",
+                      "Thickness": 3,
+                      "Material": {
+                        "Type": "Constant",
+                        "Material": {
+                          "Solid": "Soil_Dirt_Cracked"
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "From": 0.3,
+                "To": 2,
+                "Material": {
+                  "Type": "SpaceAndDepth",
+                  "Layers": [
+                    {
+                      "Type": "ConstantThickness",
+                      "Thickness": 3,
+                      "Material": {
+                        "Type": "Constant",
+                        "Material": {
+                          "Solid": "Soil_Sand"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Constant",
+          "Material": {
+            "Solid": "Rock_Sandstone"
+          }
+        }
+      ]
+    },
+    "Empty": {
+      "Type": "Queue",
+      "Queue": [
+        {
+          "Type": "Imported",
+          "Name": "Vana_Mat_Water"
+        },
+        {
+          "Type": "Constant",
+          "Material": {
+            "Solid": "Empty"
+          }
+        }
+      ]
+    }
+  },
+  "Props": [
+    {
+      "Runtime": 1,
+      "Positions": {
+        "Type": "Mesh2D",
+        "PointsY": 98,
+        "PointGenerator": {
+          "Type": "Mesh",
+          "ScaleX": 40,
+          "ScaleY": 40,
+          "ScaleZ": 40
+        }
+      },
+      "Assignments": {
+        "Type": "Constant",
+        "Prop": {
+          "Type": "Cluster",
+          "WeightedProps": [
+            {
+              "Weight": 5,
+              "ColumnProp": {
+                "Type": "Column",
+                "Scanner": {
+                  "Type": "ColumnLinear",
+                  "MinY": -2,
+                  "MaxY": 2,
+                  "RelativeToPosition": true
+                },
+                "Directionality": {
+                  "Type": "Static",
+                  "Pattern": {
+                    "Type": "Floor",
+                    "Floor": {
+                      "Type": "BlockSet",
+                      "BlockSet": {
+                        "Materials": [
+                          {
+                            "Solid": "Soil_Sand"
+                          },
+                          {
+                            "Solid": "Soil_Dirt_Cracked"
+                          }
+                        ]
+                      }
+                    },
+                    "Origin": {
+                      "Type": "BlockType",
+                      "Material": {
+                        "Solid": "Empty"
+                      }
+                    },
+                    "ExportAs": "P_Floor_Sand"
+                  }
+                },
+                "ColumnBlocks": [
+                  {
+                    "Y": 0,
+                    "Material": {
+                      "Solid": "Plant_Cactus_1"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Weight": 3,
+              "ColumnProp": {
+                "Type": "Column",
+                "Scanner": {
+                  "Type": "ColumnLinear",
+                  "MaxY": 2,
+                  "RelativeToPosition": true,
+                  "MinY": -2
+                },
+                "Directionality": {
+                  "Type": "Static",
+                  "Pattern": {
+                    "Type": "Imported",
+                    "Name": "P_Floor_Sand"
+                  }
+                },
+                "ColumnBlocks": [
+                  {
+                    "Y": 0,
+                    "Material": {
+                      "Solid": "Plant_Cactus_2"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Weight": 3,
+              "ColumnProp": {
+                "Type": "Column",
+                "Scanner": {
+                  "Type": "ColumnLinear",
+                  "MaxY": 2,
+                  "RelativeToPosition": true,
+                  "MinY": -2
+                },
+                "Directionality": {
+                  "Type": "Static",
+                  "Pattern": {
+                    "Type": "Imported",
+                    "Name": "P_Floor_Sand"
+                  }
+                },
+                "ColumnBlocks": [
+                  {
+                    "Y": 0,
+                    "Material": {
+                      "Solid": "Plant_Cactus_3"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "Range": 5,
+          "DistanceCurve": {
+            "Type": "Manual",
+            "Points": [
+              {
+                "Out": 0.2
+              },
+              {
+                "In": 5
+              }
+            ]
+          },
+          "Scanner": {
+            "Type": "ColumnLinear",
+            "RelativeToPosition": true,
+            "MaxY": 50
+          },
+          "Pattern": {
+            "Type": "Imported",
+            "Name": "P_Floor_Sand"
+          }
+        }
+      }
+    }
+  ]
+}

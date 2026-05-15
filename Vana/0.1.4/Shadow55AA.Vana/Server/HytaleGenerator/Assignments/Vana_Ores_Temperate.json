@@ -1,0 +1,281 @@
+{
+  "Type": "Weighted",
+  "ExportAs": "Vana_Ores_Temperate",
+  "WeightedAssignments": [
+    {
+      "Weight": 2,
+      "Assignments": {
+        "Type": "Constant",
+        "Prop": {
+          "Type": "Density",
+          "Range": {
+            "X": 5,
+            "Y": 5,
+            "Z": 5
+          },
+          "Material": {
+            "Type": "Solidity",
+            "Solid": {
+              "Type": "Constant",
+              "Material": {
+                "Solid": "Ore_Thorium_Stone"
+              }
+            }
+          },
+          "Scanner": {
+            "Type": "ColumnLinear",
+            "MaxY": 40,
+            "RelativeToPosition": true,
+            "ResultCap": 2
+          },
+          "Pattern": {
+            "Type": "And",
+            "ExportAs": "P_Any_Surface_Stone",
+            "Patterns": [
+              {
+                "Type": "BlockType",
+                "Material": {
+                  "Solid": "Empty"
+                }
+              },
+              {
+                "Type": "Or",
+                "Patterns": [
+                  {
+                    "Type": "Offset",
+                    "Offset": {
+                      "X": 1
+                    },
+                    "Pattern": {
+                      "Type": "BlockType",
+                      "Material": {
+                        "Solid": "Rock_Stone"
+                      }
+                    }
+                  },
+                  {
+                    "Type": "Offset",
+                    "Offset": {
+                      "X": -1
+                    },
+                    "Pattern": {
+                      "Type": "BlockType",
+                      "Material": {
+                        "Solid": "Rock_Stone"
+                      }
+                    }
+                  },
+                  {
+                    "Type": "Offset",
+                    "Offset": {
+                      "Y": 1
+                    },
+                    "Pattern": {
+                      "Type": "BlockType",
+                      "Material": {
+                        "Solid": "Rock_Stone"
+                      }
+                    }
+                  },
+                  {
+                    "Type": "Offset",
+                    "Offset": {
+                      "Y": -1
+                    },
+                    "Pattern": {
+                      "Type": "BlockType",
+                      "Material": {
+                        "Solid": "Rock_Stone"
+                      }
+                    }
+                  },
+                  {
+                    "Type": "Offset",
+                    "Offset": {
+                      "Z": 1
+                    },
+                    "Pattern": {
+                      "Type": "BlockType",
+                      "Material": {
+                        "Solid": "Rock_Stone"
+                      }
+                    }
+                  },
+                  {
+                    "Type": "Offset",
+                    "Offset": {
+                      "Z": -1
+                    },
+                    "Pattern": {
+                      "Type": "BlockType",
+                      "Material": {
+                        "Solid": "Rock_Stone"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "PlacementMask": {
+            "DontReplace": {
+              "Materials": [
+                {
+                  "Solid": "Empty"
+                }
+              ],
+              "Inclusive": true
+            },
+            "DontPlace": {
+              "Inclusive": true,
+              "Materials": [
+                {
+                  "Solid": "Empty"
+                }
+              ]
+            },
+            "Advanced": [
+              {
+                "Source": {
+                  "Materials": [
+                    {
+                      "Solid": "Ore_Thorium_Stone"
+                    }
+                  ],
+                  "Inclusive": false
+                },
+                "CanReplace": {
+                  "Inclusive": true,
+                  "Materials": [
+                    {
+                      "Solid": "Rock_Stone"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "Density": {
+            "Type": "CurveMapper",
+            "Inputs": [
+              {
+                "Type": "Abs",
+                "Inputs": [
+                  {
+                    "Type": "SimplexNoise3D",
+                    "ScaleXZ": 10,
+                    "ScaleY": 10
+                  }
+                ]
+              }
+            ],
+            "Curve": {
+              "Type": "Manual",
+              "Points": [
+                {
+                  "In": 0.1,
+                  "Out": -0.5
+                },
+                {
+                  "In": 1,
+                  "Out": 1
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "Weight": 1,
+      "Assignments": {
+        "Type": "Constant",
+        "Prop": {
+          "Type": "Density",
+          "Range": {
+            "X": 5,
+            "Y": 5,
+            "Z": 5
+          },
+          "Material": {
+            "Type": "Solidity",
+            "Solid": {
+              "Type": "Constant",
+              "Material": {
+                "Solid": "Ore_Cobalt_Stone"
+              }
+            }
+          },
+          "Scanner": {
+            "Type": "ColumnLinear",
+            "MaxY": 40,
+            "RelativeToPosition": true,
+            "ResultCap": 2
+          },
+          "Pattern": {
+            "Type": "Imported",
+            "Name": "P_Any_Surface_Stone"
+          },
+          "Density": {
+            "Type": "CurveMapper",
+            "Inputs": [
+              {
+                "Type": "Abs",
+                "Inputs": [
+                  {
+                    "Type": "SimplexNoise3D",
+                    "ScaleXZ": 10,
+                    "ScaleY": 10
+                  }
+                ]
+              }
+            ],
+            "Curve": {
+              "Type": "Manual",
+              "Points": [
+                {
+                  "In": 0.1,
+                  "Out": -0.5
+                },
+                {
+                  "In": 1,
+                  "Out": 1
+                }
+              ]
+            }
+          },
+          "PlacementMask": {
+            "Advanced": [
+              {
+                "CanReplace": {
+                  "Inclusive": true,
+                  "Materials": [
+                    {
+                      "Solid": "Rock_Stone"
+                    }
+                  ]
+                },
+                "Source": {
+                  "Materials": [
+                    {
+                      "Solid": "Ore_Cobalt_Stone"
+                    }
+                  ],
+                  "Inclusive": false
+                }
+              }
+            ],
+            "DontPlace": {
+              "Inclusive": true,
+              "Materials": [
+                {
+                  "Solid": "Empty"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}

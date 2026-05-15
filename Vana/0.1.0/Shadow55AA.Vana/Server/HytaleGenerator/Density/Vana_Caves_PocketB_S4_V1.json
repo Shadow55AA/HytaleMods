@@ -1,0 +1,209 @@
+{
+  "Type": "Cache",
+  "ExportAs": "Vana_Caves_PocketB_S4_V1",
+  "Inputs": [
+    {
+      "$Comment": "Cull height",
+      "Type": "Mix",
+      "Inputs": [
+        {
+          "$Comment": "Cull near oceans",
+          "Type": "Mix",
+          "Inputs": [
+            {
+              "$Comment": "Cull around pocket",
+              "Type": "Mix",
+              "Inputs": [
+                {
+                  "Type": "VectorWarp",
+                  "WarpVector": {
+                    "Y": -1
+                  },
+                  "WarpFactor": 40,
+                  "Inputs": [
+                    {
+                      "Type": "Sum",
+                      "Inputs": [
+                        {
+                          "Type": "CurveMapper",
+                          "Inputs": [
+                            {
+                              "Type": "BaseHeight",
+                              "Skip": false,
+                              "BaseHeightName": "Bedrock",
+                              "Distance": true
+                            }
+                          ],
+                          "Curve": {
+                            "Type": "Manual",
+                            "Points": [
+                              {
+                                "In": 40,
+                                "Out": 1
+                              },
+                              {
+                                "In": 41,
+                                "Out": 0.1
+                              },
+                              {
+                                "In": 50,
+                                "Out": 1
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "Type": "CurveMapper",
+                          "Inputs": [
+                            {
+                              "Type": "Imported",
+                              "Name": "Vana_Caves_Arterial_Map"
+                            }
+                          ],
+                          "Curve": {
+                            "Type": "Manual",
+                            "Points": [
+                              {
+                                "In": 0.6,
+                                "Out": 0
+                              },
+                              {
+                                "In": 0.61,
+                                "Out": -0.9
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "Type": "CurveMapper",
+                      "ExportAs": "Vana_Caves_PocketB_S4_V1_Warp",
+                      "Inputs": [
+                        {
+                          "Type": "SimplexNoise2D",
+                          "Skip": false,
+                          "Lacunarity": 1,
+                          "Persistence": 1,
+                          "Octaves": 1,
+                          "Scale": 150,
+                          "Seed": "Caves_Pocket_WarpB"
+                        }
+                      ],
+                      "Curve": {
+                        "Type": "Manual",
+                        "Points": [
+                          {
+                            "In": -1,
+                            "Out": 0
+                          },
+                          {
+                            "In": 1,
+                            "Out": 0.1
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "Type": "Constant",
+                  "Value": 1
+                },
+                {
+                  "Type": "CurveMapper",
+                  "Inputs": [
+                    {
+                      "Type": "Imported",
+                      "Name": "Vana_Caves_Arterial_Map"
+                    }
+                  ],
+                  "Curve": {
+                    "Type": "Manual",
+                    "Points": [
+                      {
+                        "In": 0.6,
+                        "Out": 1.1
+                      },
+                      {
+                        "In": 0.61,
+                        "Out": -0.1
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "Type": "Constant",
+              "Value": 1
+            },
+            {
+              "Type": "CurveMapper",
+              "Inputs": [
+                {
+                  "Type": "Abs",
+                  "Inputs": [
+                    {
+                      "Type": "Imported",
+                      "Name": "Vana_Landmap"
+                    }
+                  ]
+                }
+              ],
+              "Curve": {
+                "Type": "Manual",
+                "Points": [
+                  {
+                    "In": 0.15,
+                    "Out": 1.1
+                  },
+                  {
+                    "In": 0.16,
+                    "Out": -0.1
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "Type": "Constant",
+          "Value": 1
+        },
+        {
+          "Type": "CurveMapper",
+          "Inputs": [
+            {
+              "Type": "BaseHeight",
+              "Skip": false,
+              "BaseHeightName": "Bedrock",
+              "Distance": true
+            }
+          ],
+          "Curve": {
+            "Type": "Manual",
+            "Points": [
+              {
+                "In": 1,
+                "Out": 1.1
+              },
+              {
+                "In": 2,
+                "Out": -0.1
+              },
+              {
+                "In": 90,
+                "Out": -0.1
+              },
+              {
+                "In": 91,
+                "Out": 1.1
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

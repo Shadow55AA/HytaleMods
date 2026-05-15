@@ -1,0 +1,118 @@
+{
+  "Type": "Assigned",
+  "PropDistribution": {
+    "Type": "Positions",
+    "Positions": {
+      "Type": "FieldFunction",
+      "FieldFunction": {
+        "Type": "CurveMapper",
+        "Inputs": [
+          {
+            "Type": "Imported",
+            "Name": "Vana_Landmap"
+          }
+        ],
+        "Curve": {
+          "Type": "Manual",
+          "Points": [
+            {
+              "In": 0,
+              "Out": 1
+            },
+            {
+              "In": 0.2,
+              "Out": 1
+            },
+            {
+              "In": 0.21
+            }
+          ]
+        }
+      },
+      "Delimiters": [
+        {
+          "Min": 0.5,
+          "Max": 1.1
+        }
+      ],
+      "Positions": {
+        "Type": "Mesh2D",
+        "PointGenerator": {
+          "Type": "Mesh",
+          "ScaleX": 20,
+          "ScaleY": 20,
+          "ScaleZ": 20
+        }
+      }
+    }
+  },
+  "Assignments": {
+    "Type": "Constant",
+    "Prop": {
+      "Type": "Cluster",
+      "Range": 5,
+      "DistanceCurve": {
+        "Type": "Manual",
+        "Points": [
+          {
+            "Out": 0.5
+          },
+          {
+            "In": 5,
+            "Out": 0
+          }
+        ]
+      },
+      "Pattern": {
+        "Type": "Floor",
+        "Floor": {
+          "Type": "BlockType",
+          "Material": {
+            "Solid": "Rock_Basalt"
+          }
+        },
+        "Origin": {
+          "Type": "BlockType",
+          "Material": {
+            "Fluid": "Water_Source"
+          }
+        },
+        "ExportAs": "P_Floor_Ocean"
+      },
+      "WeightedProps": [
+        {
+          "ColumnProp": {
+            "Type": "Column",
+            "ColumnBlocks": [
+              {
+                "Y": 0,
+                "Material": {
+                  "Solid": "Plant_Seaweed_Grass_Tall"
+                }
+              }
+            ],
+            "Directionality": {
+              "Type": "Static",
+              "Pattern": {
+                "Type": "Imported",
+                "Name": "P_Floor_Ocean"
+              }
+            },
+            "Scanner": {
+              "Type": "ColumnLinear",
+              "MinY": -2,
+              "MaxY": 2,
+              "RelativeToPosition": true
+            }
+          }
+        }
+      ],
+      "Scanner": {
+        "Type": "ColumnLinear",
+        "MaxY": 90,
+        "RelativeToPosition": true
+      }
+    }
+  },
+  "ExportAs": "PD_Vana_Ocean_Clusters"
+}

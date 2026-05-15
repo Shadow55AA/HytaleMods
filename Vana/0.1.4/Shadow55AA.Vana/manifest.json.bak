@@ -1,0 +1,21 @@
+{
+  "Group": "Shadow55AA",
+  "Name": "Vana",
+  "Version": "0.1.3",
+  "Description": "",
+  "Authors": [
+    {
+      "Name": "Shadow55AA",
+      "Email": "",
+      "Url": ""
+    }
+  ],
+  "Website": "https://www.curseforge.com/hytale/mods/vana",
+  "ServerVersion": "2026.04.17-c2d518cc9",
+  "Dependencies": {},
+  "OptionalDependencies": {},
+  "LoadBefore": {},
+  "DisabledByDefault": false,
+  "IncludesAssetPack": false,
+  "SubPlugins": []
+}

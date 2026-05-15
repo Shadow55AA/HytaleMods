@@ -1,0 +1,73 @@
+{
+  "Type": "Mix",
+  "ExportAs": "Vana_Rivers",
+  "Inputs": [
+    {
+      "Type": "Abs",
+      "Inputs": [
+        {
+          "Type": "Mix",
+          "Inputs": [
+            {
+              "Type":	"SimplexNoise2D",
+              "Lacunarity":	2,
+              "Persistence":	0.5,
+              "Octaves":	3,
+              "Scale":	1500,
+              "Seed":	"Rivers"
+            }, {
+              "Type":	"SimplexNoise2D",
+              "Lacunarity":	2,
+              "Persistence":	0.5,
+              "Octaves":	3,
+              "Scale":	1500,
+              "Seed":	"Rivers_ejzips"
+            },{
+              "Type": "CurveMapper",
+              "Inputs": [
+                {
+                  "Type": "Imported",
+                  "Name": "Vana_Landmap"
+                }
+              ],
+              "Curve": {
+                "Type": "Manual",
+                "Points": [
+                  {
+                    "In": -0.01,
+                    "Out": -1
+                  },
+                  {
+                    "In": 0.01,
+                    "Out": 2
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },{
+      "Type": "Constant",
+      "Value": 0.2
+    },{
+      "Type": "Axis",
+      "Axis": {
+        "Y": 1
+      },
+      "Curve": {
+        "Type": "Manual",
+        "Points": [
+          {
+            "Out": 1.1,
+            "In": 100
+          },
+          {
+            "Out": -0.1,
+            "In": 200
+          }
+        ]
+      }
+    }
+  ]
+}

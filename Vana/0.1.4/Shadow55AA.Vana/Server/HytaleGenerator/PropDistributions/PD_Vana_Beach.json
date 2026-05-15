@@ -1,0 +1,96 @@
+{
+  "Type": "Assigned",
+  "Assignments": {
+    "Type": "Constant",
+    "Prop": {
+      "Type": "Union",
+      "Props": [
+        {
+          "Type": "Prefab",
+          "Directionality": {
+            "Type": "Random",
+            "Pattern": {
+              "Type": "Floor",
+              "Floor": {
+                "Type": "BlockType",
+                "Material": {
+                  "Solid": "Soil_Sand"
+                }
+              },
+              "Origin": {
+                "Type": "BlockType",
+                "Material": {
+                  "Solid": "Empty"
+                }
+              }
+            }
+          },
+          "Scanner": {
+            "Type": "ColumnLinear",
+            "MaxY": 10,
+            "RelativeToPosition": true
+          },
+          "WeightedPrefabPaths": [
+            {
+              "Path": "Trees/Palm/Stage_1"
+            },
+            {
+              "Path": "Trees/Palm/Stage_2"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "PropDistribution": {
+    "Type": "Positions",
+    "Positions": {
+      "Type": "FieldFunction",
+      "FieldFunction": {
+        "Type": "CurveMapper",
+        "Inputs": [
+          {
+            "Type": "Imported",
+            "Name": "Vana_Landmap"
+          }
+        ],
+        "Curve": {
+          "Type": "Manual",
+          "Points": [
+            {
+              "In": 0.054
+            },
+            {
+              "In": 0.055,
+              "Out": 1
+            },
+            {
+              "In": 0.15,
+              "Out": 1
+            },
+            {
+              "In": 0.16
+            }
+          ]
+        }
+      },
+      "Delimiters": [
+        {
+          "Min": 0.5,
+          "Max": 1.1
+        }
+      ],
+      "Positions": {
+        "Type": "Mesh2D",
+        "PointGenerator": {
+          "Type": "Mesh",
+          "ScaleX": 40,
+          "ScaleY": 40,
+          "ScaleZ": 40
+        },
+        "PointsY": 99
+      }
+    }
+  },
+  "ExportAs": "PD_Vana_Beach"
+}

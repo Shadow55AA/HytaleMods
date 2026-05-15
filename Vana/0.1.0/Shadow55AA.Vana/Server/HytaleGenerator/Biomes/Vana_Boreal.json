@@ -1,0 +1,96 @@
+{
+  "Terrain": {
+    "Type": "DAOTerrain",
+    "Density": {
+      "Type": "Min",
+      "Inputs": [
+        {
+          "Type": "Imported",
+          "Name": "Vana_Terrain"
+        },
+        {
+          "Type": "Imported",
+          "Name": "Vana_Caves_Arterial"
+        }
+      ]
+    }
+  },
+  "EnvironmentProvider": {
+    "Type": "Constant",
+    "Environment": "Env_Zone1_Forests"
+  },
+  "TintProvider": {
+    "Type": "Constant",
+    "Color": "#ec8f1b"
+  },
+  "MaterialProvider": {
+    "Type": "Solidity",
+    "Solid": {
+      "Type": "Queue",
+      "Queue": [
+        {
+          "Type": "SimpleHorizontal",
+          "BottomY": 100,
+          "TopY": 106,
+          "Material": {
+            "Type": "SpaceAndDepth",
+            "Layers": [
+              {
+                "Type": "ConstantThickness",
+                "Thickness": 3,
+                "Material": {
+                  "Type": "Constant",
+                  "Material": {
+                    "Solid": "Soil_Snow"
+                  }
+                }
+              },
+              {
+                "Type": "ConstantThickness",
+                "Thickness": 2,
+                "Material": {
+                  "Type": "Constant",
+                  "Material": {
+                    "Solid": "Rock_Ice"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "Type": "SimpleHorizontal",
+          "BottomY": 106,
+          "TopY": 200,
+          "Material": {
+            "Type": "Constant",
+            "Material": {
+              "Solid": "Rock_Ice"
+            }
+          }
+        },
+        {
+          "Type": "Constant",
+          "Material": {
+            "Solid": "Rock_Ice"
+          }
+        }
+      ]
+    },
+    "Empty": {
+      "Type": "Queue",
+      "Queue": [
+        {
+          "Type": "Imported",
+          "Name": "Vana_Mat_Water"
+        },
+        {
+          "Type": "Constant",
+          "Material": {
+            "Solid": "Empty"
+          }
+        }
+      ]
+    }
+  }
+}
